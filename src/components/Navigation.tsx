@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import IndieLogo from "@/public/Indie-logo-300x60.webp";
-import { Button } from "../Button";
-import { navigation_links } from "../../NavigationLinks";
+import IndieLogo from "@/../public/Logo.png";
+import { Button } from "./Button";
+import { navigation_links } from "../NavigationLinks";
+import Link from "next/link";
+import { NavLink } from "./NavLink";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,24 +16,56 @@ export function Navigation() {
   };
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header
+      id="Top"
+      className={` ${isMenuOpen ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}
+    >
       <nav
-        className="flex items-center justify-between px-6 p-4 lg:px-8 bg-white shadow-lg shadow-white "
+        className="flex items-center h-[60px] justify-end px-6 p-4 lg:px-8 bg-white shadow-lg shadow-white border-b-[1px] border-gray-200 "
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Indie Tech</span>
+        {/* Desktop Navigation */}
+        <div className={`hidden lg:flex text-sm bg-white z-20 gap-8`}>
+          {navigation_links.map((item, index) => (
+            <NavLink {...item} key={item.name + index} />
+          ))}
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`bg-white z-20 text-2xl flex fixed top-[0] pt-32 h-full w-full left-0 flex-col gap-8 lg:hidden ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
+          {navigation_links.map((item, index) => (
+            <NavLink {...item} key={item.name + index} />
+          ))}
+        </div>
+
+        <div className={`absolute top-4 left-4 md:left-8 lg:flex-1 z-20`}>
+          <a href="/" className="flex gap-4">
             <Image
+              className="h-[40px] w-auto -mt-1"
+              src={IndieLogo}
+              alt="indie tech logo"
+              width="50"
+              height="50"
+            />
+            <span className="font-serif font-bold text-lg capitalize ">
+              INDIE TECH
+            </span>
+            {/* <Image
               className="h-[40px] w-auto"
               src={IndieLogo}
               alt="indie tech logo"
               width="150"
               height="60"
-            />
+            /> */}
           </a>
         </div>
-        <div className="flex lg:hidden">
+
+        {/* Mobile Menu Toggle */}
+        <div className="flex lg:hidden fixed top-4 right-4 z-20">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -67,24 +101,6 @@ export function Navigation() {
               />
             </svg>
           </button>
-        </div>
-        <div
-          className={`lg:flex lg:gap-x-12 ${isMenuOpen ? "block" : "hidden"}`}
-        >
-          {navigation_links.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 border-gray-200 border-b-2 hover:border-primary-main "
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button href={"/login"} accent small>
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Button>
         </div>
       </nav>
     </header>

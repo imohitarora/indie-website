@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior:smooth
+}
+
+body {
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'montserrat', sans-serif;
+}
+
+
+

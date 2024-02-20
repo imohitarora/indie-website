@@ -5,6 +5,10 @@ const white = "#ffffff";
 const grey500 = "#9e9e9e";
 const grey900 = "#232323";
 export const theme = {
+  fontFamily: {
+    sans: ["var(--font-raleway)"],
+    serif: ["var(--font-montserrat)"],
+  },
   colors: {
     common: {
       white: white,
