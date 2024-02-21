@@ -1,3 +1,4 @@
+import { colors } from "@/theme";
 import { Paragraph } from "../Paragraph";
 import { SmallHeader } from "../SmallHeader";
 
@@ -7,17 +8,33 @@ export function VideoSection() {
       <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative z-10 lg:py-16">
-            {/* fade in image based on scroll */}
-            <div className="relative h-64 sm:h-80 lg:h-full">
+            {/*  */}
+            <div className="absolute z-10 -top-5 -left-5 ">
+              <svg
+                className="w-60 h-60  "
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  // fill={colors.primary.main}
+                  stroke={colors.primary.main}
+                  strokeWidth="2"
+                  fill="none"
+                  d="M48.9,-58.7C63.7,-45.8,76.3,-30.8,76.7,-15.5C77.1,-0.1,65.4,15.4,53.6,26.4C41.8,37.5,30.1,44,18.1,47.3C6.1,50.6,-6.2,50.8,-23.4,50.5C-40.6,50.3,-62.7,49.6,-74.5,38.5C-86.4,27.4,-88,5.8,-82.6,-12.8C-77.1,-31.3,-64.7,-46.8,-49.8,-59.7C-34.9,-72.6,-17.4,-82.8,-0.2,-82.6C17,-82.4,34.1,-71.6,48.9,-58.7Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+            </div>
+            <div className="relative z-20 h-64 sm:h-80 lg:h-full">
               {/* <img
                 alt="House"
                 src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 className="absolute inset-0 object-cover"
               /> */}
               <img
-                className="absolute h-100 -top-10 w-full "
-                src="/undraw_Scrum_board_re_wk7v.svg"
-                alt="undraw_Scrum_board_re_wk7v"
+                className="absolute h-100 w-full "
+                src="/scrum_board_updated.svg"
+                alt="scrum_board_updated"
               />
             </div>
           </div>
