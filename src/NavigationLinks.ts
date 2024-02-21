@@ -4,8 +4,8 @@ export const navigation_links = [
     name: "Clients",
     href: "",
     subMenu: [
-      { name: "Consultant", href: "#consultant" },
-      { name: "Enterprise", href: "#enterprise" },
+      { name: "Consultant", href: "/consultant" },
+      { name: "Enterprise", href: "/enterprise" },
     ],
   },
   { name: "About Us", href: "/about-us" },

@@ -9,6 +9,9 @@ import { Testimonials } from "@/components/Sections/Testimonial";
 import { VideoSection } from "@/components/Sections/VideoSection";
 import { BlogContent } from "@/components/Sections/BlogContent";
 import { Metadata } from "next";
+import { Enterprise } from "@/components/Sections/Enterprise";
+import { Consultants } from "@/components/Sections/Consultants";
+import { ClientContent } from "@/components/Sections/ClientContent";
 
 export const metadata: Metadata = {
   title:
@@ -25,7 +28,10 @@ export default function Home() {
     <main>
       <Hero />
       <VideoSection />
+      <ClientContent />
       <CoreAspects />
+      {/* <Consultants />
+      <Enterprise /> */}
       <BlogContent />
       <ContactUs />
     </main>

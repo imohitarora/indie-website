@@ -3,7 +3,7 @@ import { SmallHeader } from "../SmallHeader";
 
 export function VideoSection() {
   return (
-    <section className="pb-16 pt-6">
+    <section className="pb-44 pt-6">
       <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative z-10 lg:py-16">

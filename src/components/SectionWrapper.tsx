@@ -1,16 +1,26 @@
+import { colors } from "@/theme";
+
 export function SectionWrapper({
   children,
   grey,
+  primary,
   noPadding,
 }: {
   children: React.ReactNode;
   grey?: boolean;
+  primary?: boolean;
   noPadding?: boolean;
 }) {
   return (
     <section
       className={`
-      ${grey ? "bg-gray-100" : "bg-white"} 
+      ${
+        grey
+          ? "bg-gray-100"
+          : primary
+          ? "bg-primary-main text-white"
+          : "bg-white"
+      } 
       relative
   `}
     >
