@@ -65,7 +65,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="flex lg:hidden fixed top-4 right-4 z-20">
+        <div className="flex lg:hidden absolute top-4 right-4 z-20">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"

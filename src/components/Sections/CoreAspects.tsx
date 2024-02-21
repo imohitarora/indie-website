@@ -8,7 +8,7 @@ export function CoreAspects() {
   return (
     <SectionWrapper>
       <div className="flex flex-col gap-14 pt-14 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 mt-4 lg:pt-8 lg:mt-8">
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 mt-4 lg:pt-8 lg:mt-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="my-auto">
               <div className="text-left">
@@ -33,7 +33,7 @@ export function CoreAspects() {
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 mt-4 border-gray-200 border-t-[3px] lg:pt-8 lg:mt-8">
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 mt-4 border-gray-200 border-t-[3px] lg:pt-8 lg:mt-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="order-1 my-auto">
               <div className="text-left">
@@ -57,7 +57,7 @@ export function CoreAspects() {
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 mt-4 border-gray-200 border-t-[3px] lg:pt-8 lg:mt-8">
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 mt-4 border-gray-200 border-t-[3px] lg:pt-8 lg:mt-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="my-auto">
               <div className="text-left">
