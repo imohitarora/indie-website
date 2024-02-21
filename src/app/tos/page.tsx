@@ -15,381 +15,165 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <SectionWrapper>
-        <div className="flex flex-col gap-5">
-          <h1 className="font-bold text-xl ">Terms of Service</h1>
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-bold pb-6">TERMS AND CONDITIONS</h1>
           <p>
-            This web page represents a legal document that serves as our Terms
-            of Service and it governs the legal terms of our website,
-            http://www.indiegroup.ca, sub-domains, and any associated web-based
-            and mobile applications (collectively, “Website”), as owned and
-            operated by Indie Tech.
+            All rights, titles, and interests in and to the property mentioned
+            in this document will remain solely with Indie Tech Ltd. All
+            trademarks, service marks, graphics, and logos used in connection
+            with the Website and Services are trademarks or registered
+            trademarks of Indie Tech Ltd. or its licensors. Other trademarks,
+            service marks, graphics, and logos used in connection with the
+            Website and Services may be the trademarks of other third parties.
+            Your use of the Website and Services grants you no right or license
+            to reproduce or otherwise use any of Indie Tech Ltd. or third-party
+            trademarks.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Disclaimer of warranty</span>
+          </h4>
           <p>
-            Capitalized terms, unless otherwise defined, have the meaning
-            specified within the Definitions section below. This Terms of
-            Service, along with our Privacy Policy, any mobile license
-            agreement, and other posted guidelines within our Website,
-            collectively “Legal Terms”, constitute the entire and only agreement
-            between you and Indie Tech, and supersede all other agreements,
-            representations, warranties and understandings with respect to our
-            Website and the subject matter contained herein. We may amend our
-            Legal Terms at any time without specific notice to you. The latest
-            copies of our Legal Terms will be posted on our Website, and you
-            should review all Legal Terms prior to using our Website. After any
-            revisions to our Legal Terms are posted, you agree to be bound to
-            any such changes to them. Therefore, it is important for you to
-            periodically review our Legal Terms to make sure you still agree to
-            them.
+            You agree that the Service is provided on an &quot;as is&quot; and
+            &quotas available&quot basis and that your use of the Website and
+            Services is solely at your own risk. We expressly disclaim all
+            warranties of any kind, whether express or implied, including but
+            not limited to the implied warranties of merchantability, fitness
+            for a particular purpose, and non-infringement. We make no warranty
+            that the Services will meet your requirements, or that the Service
+            will be uninterrupted, timely, secure, or error-free. We also make
+            no warranty as to the results that may be obtained from the use of
+            the Service or as to the accuracy or reliability of any information
+            obtained through the Service or that defects in the Service will be
+            corrected. You understand and agree that any material and/or data
+            downloaded or otherwise obtained through the use of the Service is
+            done at your own discretion and risk, and you will be solely
+            responsible for any damage or loss of data that results from the
+            download of such material and/or data. We make no warranty regarding
+            any goods or services purchased or obtained through the Service or
+            any transactions entered into through the Service unless stated
+            otherwise. No advice or information, whether oral or written,
+            obtained by you from us or through the Service shall create any
+            warranty not expressly made herein.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Limitation of liability</span>
+          </h4>
           <p>
-            By accessing this website, you are agreeing to be bound by these
-            Website Terms and Conditions of Use, all applicable laws and
-            regulations, and agree that you are responsible for compliance with
-            any applicable local laws. If you do not agree with any of these
-            terms, you are prohibited from using or accessing this site. The
-            materials contained in this Website are protected by applicable
-            copyright and trademark law.
+            To the fullest extent permitted by applicable law, in no event will
+            Indie Tech Ltd., its affiliates, directors, officers, employees,
+            agents, suppliers, or licensors be liable to any person for any
+            indirect, incidental, special, punitive, cover, or consequential
+            damages (including, without limitation, damages for lost profits,
+            revenue, sales, goodwill, use of content, impact on business,
+            business interruption, loss of anticipated savings, loss of business
+            opportunity) however caused, under any theory of liability,
+            including, without limitation, contract, tort, warranty, breach of
+            statutory duty, negligence, or otherwise, even if the liable party
+            has been advised as to the possibility of such damages or could have
+            foreseen such damages. To the maximum extent permitted by applicable
+            law, the aggregate liability of Indie Tech Ltd. and its affiliates,
+            officers, employees, agents, suppliers, and licensors relating to
+            the services will be limited to an amount greater of one dollar or
+            any amounts actually paid in cash by you to Indie Tech Ltd. for the
+            prior one-month period prior to the first event or occurrence giving
+            rise to such liability. The limitations and exclusions also apply if
+            this remedy does not fully compensate you for any losses or fails of
+            its essential purpose.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Indemnification</span>
+          </h4>
           <p>
-            The last update to our Terms of Service was posted on January 9,
-            2017.
+            You agree to indemnify and hold Indie Tech Ltd. and its affiliates,
+            directors, officers, employees, agents, suppliers, and licensors
+            harmless from and against any liabilities, losses, damages, or
+            costs, including reasonable attorneys&apos; fees, incurred in
+            connection with or arising from any third-party allegations, claims,
+            actions, disputes, or demands asserted against any of them as a
+            result of or relating to your Content, your use of the Website and
+            Services, or any willful misconduct on your part.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Severability</span>
+          </h4>
           <p>
-            <strong className="text-lg pb-3">Definitions</strong>
-            <br />
-            The terms “us” or “we” or “our” refers to Indie Tech, the owner of
-            the Website.
+            All rights and restrictions contained in this Agreement may be
+            exercised and shall be applicable and binding only to the extent
+            that they do not violate any applicable laws and are intended to be
+            limited to the extent necessary so that they will not render this
+            Agreement illegal, invalid, or unenforceable. If any provision or
+            portion of any provision of this Agreement shall be held to be
+            illegal, invalid, or unenforceable by a court of competent
+            jurisdiction, it is the intention of the parties that the remaining
+            provisions or portions thereof shall constitute their agreement with
+            respect to the subject matter hereof, and all such remaining
+            provisions or portions thereof shall remain in full force and
+            effect.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Dispute resolution</span>
+          </h4>
           <p>
-            A “Visitor” is someone who merely browses our Website, but has not
-            registered as Member.
+            The formation, interpretation, and performance of this Agreement and
+            any disputes arising out of it shall be governed by the substantive
+            and procedural laws of Ontario, Canada, without regard to its rules
+            on conflicts or choice of law and, to the extent applicable, the
+            laws of Canada. The exclusive jurisdiction and venue for actions
+            related to the subject matter hereof shall be the courts located in
+            Ontario, Canada, and you hereby submit to the personal jurisdiction
+            of such courts. You hereby waive any right to a jury trial in any
+            proceeding arising out of or related to this Agreement. The United
+            Nations Convention on Contracts for the International Sale of Goods
+            does not apply to this Agreement.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Assignment</span>
+          </h4>
           <p>
-            A “Member” is an individual that has registered with us to use our
-            Service.
+            You may not assign, resell, sublicense, or otherwise transfer or
+            delegate any of your rights or obligations hereunder, in whole or in
+            part, without our prior written consent, which consent shall be at
+            our own sole discretion and without obligation; any such assignment
+            or transfer shall be null and void. We are free to assign any of its
+            rights or obligations hereunder, in whole or in part, to any third
+            party as part of the sale of all or substantially all of its assets
+            or stock or as part of a merger.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Changes and amendments</span>
+          </h4>
           <p>
-            Our “Service” represents the collective functionality and features
-            as offered through our Website to our Members.
+            We reserve the right to modify this Agreement or its terms relating
+            to the Website and Services at any time, effective upon posting of
+            an updated version of this Agreement on the Website. When we do, we
+            will revise the updated date at the bottom of this page. Continued
+            use of the Website and Services after any such changes shall
+            constitute your consent to such changes.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Acceptance of these terms</span>
+          </h4>
           <p>
-            A “User” is a collective identifier that refers to either a Visitor
-            or a Member.
+            You acknowledge that you have read this Agreement and agree to all
+            its terms and conditions. By accessing and using the Website and
+            Services, you agree to be bound by this Agreement. If you do not
+            agree to abide by the terms of this Agreement, you are not
+            authorized to access or use the Website and Services.
           </p>
+          <h4 className="font-bold text-lg">
+            <span>Contacting us</span>
+          </h4>
           <p>
-            All text, information, graphics, audio, video, and data offered
-            through our Website are collectively known as our “Content”.
+            If you would like to contact us to understand more about this
+            Agreement or wish to contact us concerning any matter relating to
+            it, you may send an email to hello@indietech.ai.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Use License</strong>
-          </p>
-          <ol type="a">
-            <li>
-              Permission is granted to temporarily download one copy of the
-              materials (information or software) on Indie Tech’s Website for
-              personal, non-commercial transitory viewing only. This is the
-              grant of a license, not a transfer of title, and under this
-              license you may not:
-              <ol type="i">
-                <li>modify or copy the materials;</li>
-                <li>
-                  use the materials for any commercial purpose, or for any
-                  public display (commercial or non-commercial);
-                </li>
-                <li>
-                  attempt to decompile or reverse engineer any software
-                  contained on Indie Tech’s website;
-                </li>
-                <li>
-                  remove any copyright or other proprietary notations from the
-                  materials; or
-                </li>
-                <li>
-                  transfer the materials to another person or “mirror” the
-                  materials on any other server.
-                </li>
-              </ol>
-            </li>
-            <li>
-              This license shall automatically terminate if you violate any of
-              these restrictions and may be terminated by Indie Tech at any
-              time. Upon terminating your viewing of these materials or upon the
-              termination of this license, you must destroy any downloaded
-              materials in your possession whether in electronic or printed
-              format.
-            </li>
-          </ol>
-          <p>
-            <strong className="text-lg pb-3">Restricted Uses</strong>
-            <br />
-            Listing of offered products on the Website could be used only for
-            lawful purposes by Users of the Website. You could not frame or
-            utilize framing techniques to enclose any hallmark, logo,
-            copyrighted image, or most proprietary details (consisting of
-            images, text, page layout, or type) of Indie Tech without express
-            composed consent. You might not use any meta tags or any various
-            other “unseen text” utilizing Indie Tech’s name or trademarks
-            without the express written consent of Indie Tech. You agree not to
-            offer or modify any content found on the Website consisting of,
-            however not limited to, names of Users and Content, or to recreate,
-            display, openly perform, distribute, or otherwise make use of the
-            Material, in any way for any public function, in connection with
-            services or products that are not those of Indie Tech, in other way
-            that is likely to trigger confusion among consumers, that disparages
-            or challenges Indie Tech or its licensors, that dilutes the strength
-            of Indie Tech’s or its licensor’s residential property, or that
-            otherwise infringes Indie Tech’s or its licensor’s copyright rights.
-            You also agree to abstain from abusing any of the material that
-            appears on the Site. The use of the Material on any other website or
-            in a networked computer system environment for any purpose is
-            prohibited. Any code that Indie Tech develops to generate or show
-            any Material of the pages making up the Website is likewise secured
-            by Indie Tech’s copyright, and you may not copy or adjust such code.
-          </p>
-          <p>
-            Indie Tech has no duty to keep track of any products published,
-            transferred, or connected to or with the Site. If you think that
-            something on the Website breaches these Terms please contact our
-            marked representative as set forth below.
-          </p>
-          <p>
-            If alerted by a User of any products which allegedly do not conform
-            to these Terms, Indie Tech could in its single discernment explore
-            the allegation and figure out whether to take other actions or ask
-            for the removal or get rid of the Content. Indie Tech has no
-            liability or duty to Individuals for efficiency or nonperformance of
-            such activities.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Electronic Communication</strong>
-            <br />
-            You are connecting with us electronically when you go to the Website
-            or send out emails to us. You consent to get interactions from us
-            online. We will connect with you by email or by uploading
-            notifications on the Site. You concur that all contracts
-            notifications, disclosure, and various other communications that we
-            provide to you digitally please any legal requirements that such
-            communications be in writing.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Your Account</strong>
-            <br />
-            If you utilize the Website, you are accountable for maintaining the
-            confidentiality of your account and password and you accept
-            responsibility for all activities that happen under your account and
-            password. You also accept not to reveal any personally identifiable
-            information, consisting of, however not limited to, first and last
-            names, credentials, or various other details of a personal nature
-            (“Personal Data”) from the Site. Your disclosure of any Personal
-            Data on the website might result in the immediate termination of
-            your account. Indie Tech additionally reserves the right to refuse
-            service, terminate accounts, and remove or edit Content at its sole
-            discernment.
-          </p>
-          <p>
-            Indie Tech does not guarantee the truthfulness, precision, or
-            dependability of Content on the site, consisting of Personal Data.
-            Each Individual is accountable for upgrading and changing any
-            pertinent account info when essential to preserve the truthfulness,
-            precision, or reliability of the details.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Reviews, Comments, and Other Material
-            </strong>
-            <br />
-            Registered Users of the Website might post evaluations and remarks
-            of a product and services purchased by means of the Website, so long
-            as the Material is not unlawful, profane, threatening, defamatory,
-            an invasive of privacy, infringing of intellectual property rights,
-            or otherwise injurious to third parties or objectionable and does
-            not include industrial solicitation, mass mailings, or any type of
-            “spam.” You may not use another User’s account to impersonate a User
-            or entity, or otherwise deceive as to the origin of the opinions.
-            Indie Tech reserves the right (however is not bound) to eliminate or
-            modify such Material, but does not regularly examine posted
-            Material.
-          </p>
-          <p>
-            If you post an evaluation or send comments, and unless Indie Tech
-            suggests otherwise, you grant Indie Tech a nonexclusive,
-            royalty-free, permanent, irrevocable, and completely sublicensable
-            right to utilize, recreate, modify, adjust, release, equate, create
-            derivative works from, distribute, and screen such content
-            throughout the world, in any media. You grant Indie Tech and
-            sublicenses the right to utilize your name in connection with such
-            Material, if they choose. You represent and require that You own or
-            otherwise control all the rights to the content that You post; that
-            the content is accurate; that use of the content You supply does not
-            violate this policy and will not trigger injury to anyone or entity;
-            which You will indemnify Indie Tech for all claims resulting from
-            Content You supply. Indie Tech has the right but not the commitment
-            to edit and keep track of or eliminate any task or Material. Indie
-            Group takes no duty and assumes no liability for any content
-            published by You or any 3rd party.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Legal Compliance</strong>
-            <br />
-            You agree to comply with all applicable domestic and international
-            laws, statutes, ordinances, and regulations regarding your use of
-            our Website. Indie Tech reserves the right to investigate complaints
-            or reported violations of our Legal Terms and to take any action we
-            deem appropriate, including but not limited to canceling your Member
-            account, reporting any suspected unlawful activity to law
-            enforcement officials, regulators, or other third parties and
-            disclosing any information necessary or appropriate to such persons
-            or entities relating to your profile, email addresses, usage
-            history, posted materials, IP addresses and traffic information, as
-            allowed under our Privacy Policy.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Intellectual Property</strong>
-            <br />
-            Our Website may contain our service marks or trademarks as well as
-            those of our affiliates or other companies, in the form of words,
-            graphics, and logos. Your use of our Website does not constitute any
-            right or license for you to use such service marks/trademarks,
-            without the prior written permission of the corresponding service
-            mark/trademark owner. Our Website is also protected under
-            international copyright laws. The copying, redistribution, use or
-            publication by you of any portion of our Website is strictly
-            prohibited. Your use of our Website does not grant you ownership
-            rights of any kind in our Website.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Revisions and Errata</strong>
-            <br />
-            The materials appearing on Indie Tech’s Website could include
-            technical, typographical, or photographic errors. Indie Tech does
-            not warrant that any of the materials on its Website are accurate,
-            complete, or current. Indie Tech may make changes to the materials
-            contained on its Website at any time without notice. Indie Tech does
-            not, however, make any commitment to update the materials.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Disclaimer
-              <br />
-            </strong>
-            The materials on <b>Indie Tech</b>‘s Website are provided “as is”{" "}
-            <b>Indie Tech</b> makes no warranties, expressed or implied, and
-            hereby disclaims and negates all other warranties, including without
-            limitation, implied warranties or conditions of merchantability,
-            fitness for a particular purpose, or non-infringement of
-            intellectual property or other violation of rights. Furthermore,{" "}
-            <b>Indie Tech</b> does not warrant or make any representations
-            concerning the accuracy, likely results, or reliability of the use
-            of the materials on its Internet Website or otherwise relating to
-            such materials or on any sites linked to this site. The Website
-            serves as a venue for Individuals to purchase distinct service or
-            products. Neither Indie Tech nor the Website has control over the
-            quality or fitness for a particular function of a product. Indie
-            Group likewise has no control over the accuracy, reliability,
-            completeness, or timeliness of the User-submitted details and makes
-            no representations or warranties about any info on the Site.
-          </p>
-          <p>
-            THE WEBSITE AND ALL DETAILS, CONTENT, MATERIALS, PRODUCTS (INCLUDING
-            SOFTWARE APPLICATION) AND SERVICES LISTED ON OR OTHERWISE MADE
-            AVAILABLE TO YOU THROUGH THIS WEBSITE ARE PROVIDED BY Indie Tech ON
-            AN “AS IS” AND “AS AVAILABLE” BASIS, UNLESS OTHERWISE SPECIFIED IN
-            WRITING. Indie Tech MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY
-            KIND, EXPRESS OR IMPLIED, ABOUT THE OPERATION OF THIS Website OR THE
-            INFO, MATERIALS, PRODUCTS (INCLUDING SOFTWARE) OR SERVICES LISTED ON
-            OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THIS SITE, UNLESS
-            OTHERWISE POINTED OUT IN WRITING. YOU EXPRESSLY AGREE THAT YOUR USE
-            OF THIS WEBSITE IS AT YOUR OWN RISK.
-          </p>
-          <p>
-            TO THE COMPLETE EXTENT PERMISSIBLE BY APPLICABLE LAW, Indie Tech
-            DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT
-            LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND PHYSICAL
-            FITNESS FOR A PARTICULAR PURPOSE. Indie Tech DOES NOT WARRANT THAT
-            THIS WEBSITE; DETAILS, CONTENT, MATERIALS, PRODUCTS (INCLUDING
-            SOFTWARE APPLICATION) OR SERVICES CONSISTED OF ON OR OTHERWISE MADE
-            AVAILABLE TO YOU THROUGH THE SITE; ITS SERVERS; OR EMAIL SENT FROM
-            Indie Tech ARE WITHOUT VIRUSES OR OTHER HARMFUL ELEMENTS. Indie
-            Group WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM
-            THE USE OF THE WEBSITE OR FROM ANY DETAILS, CONTENT, MATERIALS,
-            PRODUCTS (INCLUDING SOFTWARE APPLICATION) OR SERVICES LISTED ON OR
-            OTHERWISE MADE AVAILABLE TO YOU WITH THIS SITE, INCLUDING, BUT NOT
-            LIMITED TO DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, AND CONSEQUENTIAL
-            DAMAGES, UNLESS OTHERWISE POINTED OUT IN WRITING. UNDER NO SCENARIO
-            SHALL Indie Tech’S LIABILITY DEVELOPING FROM OR IN CONNECTION WITH
-            THE WEBSITE OR YOUR USE OF THE WEBSITE, DESPITE THE REASON FOR
-            ACTION (WHETHER IN AGREEMENT, TORT, BREACH OF SERVICE WARRANTY OR
-            OTHERWISE), GO BEYOND $100.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Links to Other Websites</strong>
-            <br />
-            Our Website may contain links to third party websites. These links
-            are provided solely as a convenience to you. By linking to these
-            websites, we do not create or have an affiliation with, or sponsor
-            such third party websites. The inclusion of links within our Website
-            does not constitute any endorsement, guarantee, warranty, or
-            recommendation of such third party websites. Indie Tech has no
-            control over the legal documents and privacy practices of third
-            party websites; as such, you access any such third party websites at
-            your own risk.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Site Terms of Service Modifications
-            </strong>
-            <br />
-            Indie Tech may revise these Terms of Service for its Website at any
-            time without notice. By using this Website you are agreeing to be
-            bound by the then current version of these Terms and Conditions of
-            Use.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">Governing Law</strong>
-            <br />
-            Any claim relating to Indie Tech’s Website shall be governed by the
-            laws of Canada without regard to its conflict of law provisions, and
-            You consent to exclusive jurisdiction and venue in such courts.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Indemnity
-              <br />
-            </strong>
-            You accept defend, indemnify, and hold safe Indie Tech, its
-            affiliates, and their corresponding officers, directors, agents and
-            workers, from and against any claims, actions or demands, including
-            without limitation affordable legal, accounting, and other provider
-            charges, affirming or resulting from (i) any Content of most
-            material You offer to the Site, (ii) Your use of any Content, or
-            (iii) Your breach of the terms of these Terms. Indie Tech will
-            provide notice to You promptly of any such claim, match, or case.
-          </p>
-          <p>
-            <strong className="text-lg pb-3">General Terms</strong>
-            <br />
-            Our Legal Terms shall be treated as though it were executed and
-            performed in Canada and shall be governed by and construed in
-            accordance with the laws of Canada without regard to conflict of law
-            principles. In addition, you agree to submit to the personal
-            jurisdiction and venue of such courts. Any cause of action by you
-            with respect to our Website, must be instituted within one (1) year
-            after the cause of action arose or be forever waived and barred.
-            Should any part of our Legal Terms be held invalid or unenforceable,
-            that portion shall be construed consistent with applicable law and
-            the remaining portions shall remain in full force and effect. To the
-            extent that any Content in our Website conflicts or is inconsistent
-            with our Legal Terms, our Legal Terms shall take precedence. Our
-            failure to enforce any provision of our Legal Terms shall not be
-            deemed a waiver of such provision nor of the right to enforce such
-            provision. The rights of Indie Tech under our Legal Terms shall
-            survive the termination of our Legal Terms.
-          </p>
+          <p>This document was last updated on June 2, 2021</p>
         </div>
       </SectionWrapper>
       <ContactUs />
-    </main>
+    </>
   );
 }

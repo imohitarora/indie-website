@@ -6,12 +6,14 @@ export function Button({
   accent,
   onClick,
   className,
+  target,
   small,
 }: {
   children: React.ReactNode;
   href?: string;
   accent?: boolean;
   className?: string;
+  target?: string;
   onClick?: () => void;
   small?: boolean;
 }) {
@@ -25,6 +27,7 @@ export function Button({
   if (href) {
     return (
       <Link
+        target={target}
         href={href}
         className={classes + " " + sizeClasses + " " + className}
       >

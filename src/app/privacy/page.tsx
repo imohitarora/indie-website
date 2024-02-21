@@ -15,316 +15,202 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <SectionWrapper>
-        <div className="flex flex-col gap-5">
-          <h1 className="font-bold text-xl ">Privacy Policy</h1>
-          <p>
-            Our Privacy Policy was last updated and posted on January 9, 2017.
-            It governs the privacy terms of our Website, located at
-            http://www.indiegroup.ca, sub-domains, and any associated web-based
-            and mobile applications (collectively, “Website”), as owned and
-            operated by Indie Tech. Any capitalized terms not defined in our
-            Privacy Policy, have the meaning as specified in our Terms of
-            Service.
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-bold pb-6">PRIVACY POLICY</h1>
+          <p className="text-base">
+            Session cookies are temporary cookies that are used during the
+            course of your visit to the Website, and they expire when you close
+            the web browser.
           </p>
-          <p>
-            Your privacy is very important to us. Accordingly, we have developed
-            this Policy in order for you to understand how we collect, use,
-            communicate and disclose and make use of personal information. We
-            use your Personal Information only for providing and improving the
-            website. By using the website, you agree to the collection and use
-            of information in accordance with this policy. Unless otherwise
-            defined in this Privacy Policy, terms used in this Privacy Policy
-            have the same meanings as in our Terms and Conditions, accessible at
-            http://www.indiegroup.ca. The following outlines our privacy policy.
+          <p className="text-base">
+            Persistent cookies are used to remember your preferences within our
+            Website and remain on your desktop or mobile device even after you
+            close your browser or restart your computer. They ensure a
+            consistent and efficient experience for you while visiting the
+            Website and Services.
           </p>
-          <ul>
-            <li>
-              Before or at the time of collecting personal information, we will
-              identify the purposes for which information is being collected.
-            </li>
-            <li>
-              We will collect and use personal information solely with the
-              objective of fulfilling those purposes specified by us and for
-              other compatible purposes, unless we obtain the consent of the
-              individual concerned or as required by law.
-            </li>
-            <li>
-              We will only retain personal information as long as necessary for
-              the fulfillment of those purposes.
-            </li>
-            <li>
-              We will collect personal information by lawful and fair means and,
-              where appropriate, with the knowledge or consent of the individual
-              concerned.
-            </li>
-            <li>
-              Personal data should be relevant to the purposes for which it is
-              to be used, and, to the extent necessary for those purposes,
-              should be accurate, complete, and up-to-date.
-            </li>
-            <li>
-              We will protect personal information by reasonable security
-              safeguards against loss or theft, as well as unauthorized access,
-              disclosure, copying, use or modification.
-            </li>
-            <li>
-              We will make readily available to customers information about our
-              policies and practices relating to the management of personal
-              information.
-            </li>
-          </ul>
-          <p>
-            <strong className="text-lg pb-3">Your Privacy</strong>
-            <br />
-            Indie Tech follows all legal requirements to protect your privacy.
-            Our Privacy Policy is a legal statement that explains how we may
-            collect information from you, how we may share your information, and
-            how you can limit our sharing of your information. We utilize the
-            Personal Data you offer in a way that is consistent with this
-            Personal privacy Policy. If you provide Personal Data for a
-            particular reason, we could make use of the Personal Data in
-            connection with the reason for which it was provided. For example,
-            registration info sent when developing your account, might be used
-            to suggest products to you based on past acquisitions. We might use
-            your Personal Data to offer access to services on the Website and
-            monitor your use of such services. Indie Tech may also utilize your
-            Personal Data and various other personally non-identifiable info
-            gathered through the Website to assist us with improving the
-            material and functionality of the Website, to much better comprehend
-            our users, and to improve our services. You will see terms in our
-            Privacy Policy that are capitalized. These terms have meanings as
-            described in the Definitions section below.
+          <p className="text-base">
+            Cookies may be set by the Website (&quot;first-party cookies&quot;),
+            or by third parties, such as those who serve content or provide
+            advertising or analytics services on the Website (&quot;third party
+            cookies&quot;). These third parties can recognize you when you visit
+            our website and also when you visit certain other websites.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Definitions</strong>
-            <br />
-            “Non Personal Information” is information that is not personally
-            identifiable to you and that we automatically collect when you
-            access our Website with a web browser. It may also include publicly
-            available information that is shared between you and others.
+          <p className="text-base">
+            We may use cookies to collect, store, and track information for
+            statistical purposes to operate the Website and Services. You have
+            the ability to accept or decline cookies. Most web browsers
+            automatically accept cookies, but you can usually modify your
+            browser setting to decline cookies if you prefer. If you choose to
+            decline cookies, you may not be able to fully experience the
+            features of the Website and Services.
           </p>
-          <p>
-            “Personally Identifiable Information” is non-public information that
-            is personally identifiable to you and obtained in order for us to
-            provide you within our Website. Personally Identifiable Information
-            may include information such as your name, email address, and other
-            related information that you provide to us or that we obtain about
-            you.
+          <p className="text-base underline">Necessary cookies</p>
+          <p className="text-base">
+            Necessary cookies allow us to offer you the best possible experience
+            when accessing and navigating through our Website and using its
+            features. For example, these cookies let us recognize that you have
+            created an account and have logged into that account to access the
+            content.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Information We Collect</strong>
-            <br />
-            Generally, you control the amount and type of information you
-            provide to us when using our Website.
+          <p className="text-base underline">Functionality cookies</p>
+          <p className="text-base">
+            Functionality cookies let us operate the Website and Services in
+            accordance with the choices you make. For example, we will recognize
+            your username and remember how you customized the Website and
+            Services during future visits.
           </p>
-          <p>
-            As a Visitor, you can browse our website to find out more about our
-            Website. You are not required to provide us with any Personally
-            Identifiable Information as a Visitor.
+          <p className="text-base underline">Analytical cookies</p>
+          <p className="text-base">
+            These cookies enable us and third party services to collect
+            aggregated data for statistical purposes on how our visitors use the
+            Website. These cookies do not contain personal information such as
+            names and email addresses and are used to help us improve your user
+            experience of the Website.
           </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Computer Information Collected
-            </strong>
-            <br />
-            When you use our Website, we automatically collect certain computer
-            information by the interaction of your mobile phone or web browser
-            with our Website. Such information is typically considered Non
-            Personal Information. We also collect the following:
+          <p className="text-base underline">Social media cookies</p>
+          <p className="text-base">
+            Third party cookies from social media sites (such as Facebook,
+            Twitter, etc) let us track social network users when they visit or
+            use the Website and Services, or share content, by using a tagging
+            mechanism provided by those social networks.
           </p>
-          <ul>
-            <li>
-              <strong className="text-lg pb-3">Cookies</strong>
-              <br />
-              Our Website uses “Cookies” to identify the areas of our Website
-              that you have visited. A Cookie is a small piece of data stored on
-              your computer or mobile device by your web browser. We use Cookies
-              to personalize the Content that you see on our Website. Most web
-              browsers can be set to disable the use of Cookies. However, if you
-              disable Cookies, you may not be able to access functionality on
-              our Website correctly or at all. We never place Personally
-              Identifiable Information in Cookies.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">Geographical Information</strong>
-              <br />
-              When you use the mobile application, we may use GPS technology (or
-              other similar technology) to determine your current location in
-              order to determine the city you are located in and display
-              information with relevant data or advertisements. We will not
-              share your current location with other users or partners. If you
-              do not want us to use your location for the purposes set forth
-              above, you should turn off the location services for the mobile
-              application located in your account settings or in your mobile
-              phone settings and/or within the mobile application.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">Automatic Information</strong>
-              <br />
-              We automatically receive information from your web browser or
-              mobile device. This information includes the name of the website
-              from which you entered our Website, if any, as well as the name of
-              the website to which you’re headed when you leave our website.
-              This information also includes the IP address of your
-              computer/proxy server that you use to access the Internet, your
-              Internet Website provider name, web browser type, type of mobile
-              device, and computer operating system. We use all of this
-              information to analyze trends among our Users to help improve our
-              Website.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">Log Data</strong>
-              <br />
-              Like many Website operators, we collect information that your
-              browser sends whenever you visit our Website (“Log Data”). This
-              Log Data may include information such as your computer’s Internet
-              Protocol (“IP”) address, browser type, browser version, the pages
-              of our Website that you visit, the time and date of your visit,
-              the time spent on those pages and other statistics.
-            </li>
-          </ul>
-          <p>
-            Under the Child’s Online Privacy Security Act, no Website operator
-            can require, as a condition to involvement in an activity, that a
-            child younger than 13 years of age divulge more details than is
-            reasonably required. Indie Tech abides by this demand. Indie Tech
-            just collects information willingly offered; no information is
-            gathered passively. children under 13 can submit only their email
-            address when sending us an email in our “Contact Us” area. Indie
-            Group makes use of the email address to respond to a one-time demand
-            from a child under 13 and afterwards deletes the email address. In
-            case Indie Tech collects and maintains personal information relating
-            to a child under 13, the parent may send out an email to us to
-            review, alter and/or erase such info as well as to decline to enable
-            any additional collection or use of the child’s information.
+          <p className="text-base">
+            These cookies are also used for event tracking and remarketing
+            purposes. Any data collected with these tags will be used in
+            accordance with our and social networks’ privacy policies. We will
+            not collect or share any personally identifiable information from
+            the user.
           </p>
-          <p>
-            <strong className="text-lg pb-3">
-              How We Use Your Information
-            </strong>
-            <br />
-            We use the information we receive from you as follows:
+          <p className="text-base">Do Not Track signals</p>
+          <p className="text-base">
+            Some browsers incorporate a Do Not Track feature that signals to
+            websites you visit that you do not want to have your online activity
+            tracked. Tracking is not the same as using or collecting information
+            in connection with a website. For these purposes, tracking refers to
+            collecting personally identifiable information from consumers who
+            use or visit a website or online service as they move across
+            different websites over time. How browsers communicate the Do Not
+            Track signal is not yet uniform. As a result, the Website and
+            Services are not yet set up to interpret or respond to Do Not Track
+            signals communicated by your browser. Even so, as described in more
+            detail throughout this Policy, we limit our use and collection of
+            your personal information.
           </p>
-          <ul>
-            <li>
-              <strong className="text-lg pb-3">Customizing Our Website</strong>
-              <br />
-              We may use the Personally Identifiable information you provide to
-              us along with any computer information we receive to customize our
-              Website.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">
-                Sharing Information with Affiliates and Other Third Parties
-              </strong>
-              <br />
-              We do not sell, rent, or otherwise provide your Personally
-              Identifiable Information to third parties for marketing purposes.
-              We may provide your Personally Identifiable Information to
-              affiliates that provide services to us with regards to our Website
-              (i.e. payment processors, Website hosting companies, etc.); such
-              affiliates will only receive information necessary to provide the
-              respective services and will be bound by confidentiality
-              agreements limiting the use of such information.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">Data Aggregation</strong>
-              <br />
-              We retain the right to collect and use any Non Personal
-              Information collected from your use of our Website and aggregate
-              such data for internal analytics that improve our Website and
-              Service as well as for use or resale to others. At no time is your
-              Personally Identifiable Information included in such data
-              aggregations.
-            </li>
-            <li>
-              <strong className="text-lg pb-3">
-                Legally Required Releases of Information
-              </strong>
-              <br />
-              We may be legally required to disclose your Personally
-              Identifiable Information, if such disclosure is (a) required by
-              subpoena, law, or other legal process; (b) necessary to assist law
-              enforcement officials or government enforcement agencies; (c)
-              necessary to investigate violations of or otherwise enforce our
-              Legal Terms; (d) necessary to protect us from legal action or
-              claims from third parties including you and/or other Members;
-              and/or (e) necessary to protect the legal rights, personal/real
-              property, or personal safety of Indie Tech, our Users, employees,
-              and affiliates.
-            </li>
-          </ul>
-          <p>
-            <strong className="text-lg pb-3">Opt-Out</strong>
-            <br />
-            We offer you the chance to “opt-out” from having your personally
-            identifiable information used for particular functions, when we ask
-            you for this detail. When you register for the website, if you do
-            not want to receive any additional material or notifications from
-            us, you can show your preference on our registration form.
+          <p className="text-base">Email marketing</p>
+          <p className="text-base">
+            We offer electronic newsletters to which you may voluntarily
+            subscribe at any time. We are committed to keeping your e-mail
+            address confidential and will not disclose your email address to any
+            third parties except as allowed in the information use and
+            processing section or for the purposes of utilizing a third party
+            provider to send such emails. We will maintain the information sent
+            via e-mail in accordance with applicable laws and regulations.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Links to Other Websites</strong>
-            <br />
-            Our Website may contain links to other websites that are not under
-            our direct control. These websites may have their own policies
-            regarding privacy. We have no control of or responsibility for
-            linked websites and provide these links solely for the convenience
-            and information of our visitors. You access such linked Websites at
-            your own risk. These websites are not subject to this Privacy
-            Policy. You should check the privacy policies, if any, of those
-            individual websites to see how the operators of those third-party
-            websites will utilize your personal information. In addition, these
-            websites may contain a link to Websites of our affiliates. The
-            websites of our affiliates are not subject to this Privacy Policy,
-            and you should check their individual privacy policies to see how
-            the operators of such websites will utilize your personal
-            information.
+          <p className="text-base">
+            We will comply with applicable anti-spam law, such as the CAN-SPAM
+            Act and CASL. All e-mails sent from us will clearly state who the
+            e-mail is from and provide clear information on how to contact the
+            sender. You may choose to stop receiving our newsletter or marketing
+            emails by following the unsubscribe instructions included in these
+            emails or by contacting us. However, you will continue to receive
+            essential transactional emails.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Security</strong>
-            <br />
-            The security of your Personal Information is important to us, but
-            remember that no method of transmission over the Internet, or method
-            of electronic storage, is 100% secure. While we strive to use
-            commercially acceptable means to protect your Personal Information,
-            we cannot guarantee its absolute security. We utilize practical
-            protection measures to safeguard against the loss, abuse, and
-            modification of the individual Data under our control. Personal Data
-            is kept in a secured database and always sent out by means of an
-            encrypted SSL method when supported by your web browser. No Web or
-            email transmission is ever totally protected or mistake cost-free.
-            For example, email sent out to or from the Website may not be
-            protected. You must take unique care in deciding what info you send
-            to us by means of email.
+          <p className="text-base">
+            Our emails may contain a &quot;web beacon&quot; (or &quot;tracking
+            pixel&quot;) to tell us whether our emails are opened and verify any
+            clicks through to links or advertisements within the email. We may
+            use this information for purposes including determining which of our
+            emails are more interesting to users and to query whether users who
+            do not open our emails wish to continue receiving them. The pixel
+            will be deleted when you delete the email. If you do not wish the
+            pixel to be downloaded to your device, you should read the email in
+            plain text view or with images disabled.
           </p>
-          <p>
-            <strong className="text-lg pb-3">Privacy Policy Updates</strong>
-            <br />
-            We reserve the right to modify this Privacy Policy at any time. You
-            should review this Privacy Policy frequently. If we make material
-            changes to this policy, we may notify you on our Website, by a blog
-            post, by email, or by any method we determine. The method we chose
-            is at our sole discretion. We will also change the “Last Updated”
-            date at the beginning of this Privacy Policy. Any changes we make to
-            our Privacy Policy are effective as of this Last Updated date and
-            replace any prior Privacy Policies.
+          <p className="text-base">Links to other resources</p>
+          <p className="text-base">
+            The Website and Services contain links to other resources that are
+            not owned or controlled by us. Please be aware that we are not
+            responsible for the privacy practices of such other resources or
+            third parties. We encourage you to be aware when you leave the
+            Website and Services and to read the privacy statements of each and
+            every resource that may collect Personal Information.
           </p>
-          <p>
-            <strong className="text-lg pb-3">
-              Questions About Our Privacy Practices or This Privacy Policy
-            </strong>
-            <br />
-            We are committed to conducting our business in accordance with these
-            principles in order to ensure that the confidentiality of personal
-            information is protected and maintained. If you have any questions
-            about our Privacy Practices or this Policy, please contact us.
+          <p className="text-base">Information security</p>
+          <p className="text-base">
+            We secure information you provide on computer servers in a
+            controlled, secure environment, protected from unauthorized access,
+            use, or disclosure. We maintain reasonable administrative,
+            technical, and physical safeguards in an effort to protect against
+            unauthorized access, use, modification, and disclosure of Personal
+            Information in its control and custody. However, no data
+            transmission over the Internet or wireless network can be
+            guaranteed. Therefore, while we strive to protect your Personal
+            Information, you acknowledge that (i) there are security and privacy
+            limitations of the Internet which are beyond our control; (ii) the
+            security, integrity, and privacy of any and all information and data
+            exchanged between you and the Website and Services cannot be
+            guaranteed; and (iii) any such information and data may be viewed or
+            tampered with in transit by a third party, despite best efforts.
           </p>
+          <p className="text-base">Data breach</p>
+          <p className="text-base">
+            In the event we become aware that the security of the Website and
+            Services has been compromised or users Personal Information has been
+            disclosed to unrelated third parties as a result of external
+            activity, including, but not limited to, security attacks or fraud,
+            we reserve the right to take reasonably appropriate measures,
+            including, but not limited to, investigation and reporting, as well
+            as notification to and cooperation with law enforcement authorities.
+            In the event of a data breach, we will make reasonable efforts to
+            notify affected individuals if we believe that there is a reasonable
+            risk of harm to the user as a result of the breach or if notice is
+            otherwise required by law. When we do, we will post a notice on the
+            Website, send you an email.
+          </p>
+          <p className="text-base">Changes and amendments</p>
+          <p className="text-base">
+            We reserve the right to modify this Policy or its terms relating to
+            the Website and Services from time to time in our discretion and
+            will notify you of any material changes to the way in which we treat
+            Personal Information. When we do, we will revise the updated date at
+            the bottom of this page. We may also provide notice to you in other
+            ways in our discretion, such as through contact information you have
+            provided. Any updated version of this Policy will be effective
+            immediately upon the posting of the revised Policy unless otherwise
+            specified. Your continued use of the Website and Services after the
+            effective date of the revised Policy (or such other act specified at
+            that time) will constitute your consent to those changes. However,
+            we will not, without your consent, use your Personal Information in
+            a manner materially different than what was stated at the time your
+            Personal Information was collected.
+          </p>
+          <p className="text-base">Acceptance of this policy</p>
+          <p className="text-base">
+            You acknowledge that you have read this Policy and agree to all its
+            terms and conditions. By accessing and using the Website and
+            Services you agree to be bound by this Policy. If you do not agree
+            to abide by the terms of this Policy, you are not authorized to
+            access or use the Website and Services.
+          </p>
+          <p className="text-base">Contacting us</p>
+          <p className="text-base">
+            If you would like to contact us to understand more about this Policy
+            or wish to contact us concerning any matter relating to individual
+            rights and your Personal Information, you may send an email to{" "}
+            <a href="mailto:hello@indietech.ai">security@indietech.ai</a>.
+          </p>
+          <p className="text-base">
+            This document was last updated on September 27th, 2023
+          </p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
         </div>
       </SectionWrapper>
       <ContactUs />
-    </main>
+    </>
   );
 }

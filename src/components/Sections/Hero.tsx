@@ -7,13 +7,13 @@ export function Hero() {
     <div className="relative bg-white max-w-[100vw] overflow-hidden">
       {/* SVG */}
       <HeroPattern
-        className="absolute z-[0] top-[60px] left-[-20%] lg:left-[-10%]  scale-[0.6] 2xl:left-0 lg:scale-[0.7] xl:scale-[0.8] origin-[top_left]"
+        className="absolute z-[0] top-[60px] left-[-20%] lg:left-[-10%] scale-[0.6] 2xl:left-0 lg:scale-[0.7] xl:scale-[0.8] origin-[top_left]"
         color={colors.primary.main}
         flip
       />
       {/* -- */}
       <HeroPattern
-        className="absolute z-[0] top-[30%] right-[-20%] lg:right-[-10%] scale-[0.6] lg:scale-[0.7] xl:scale-[0.8] 2xl:right-0 origin-[bottom_right]"
+        className="absolute z-[0] bottom-0 right-[-20%] lg:right-[-10%] scale-[0.6] lg:scale-[0.7] xl:scale-[0.8] 2xl:right-0 origin-[bottom_right]"
         color={colors.primary.main}
       />
       {/*  */}
@@ -33,8 +33,8 @@ export function Hero() {
       <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 ">
         {/* background fade/blur */}
         <div className="absolute bg-white rotate-[20deg] w-full h-[50%] blur-2xl" />
-        {/*  */}
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+        {/* HIDDEN FOR NOW */}
+        {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Announcing our next round of funding.{" "}
             <a href="#" className="font-semibold text-primary-main">
@@ -42,30 +42,39 @@ export function Hero() {
               Read more <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="relative text-center z-20">
+          <div className="h-1 w-32 mx-auto mb-10 bg-primary-main" />
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-            The future of consulting: redefined
+            Enterprise Consultant Management
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Welcome to the new era of consulting, brought to you by Indie Tech.
-            Our platform is the culmination of diverse perspectives, engineered
-            to optimize every aspect of the consulting process. By understanding
-            and addressing the unique challenges faced by consultants and
-            clients alike, we&apos;re reshaping the industry landscape. Embrace
-            the future of consulting, redefined
+            Our consultant platform helps enterprises manage and engage the
+            consultants working for them across all divisions, from consulting
+            companies to independent contractors. We track and report on the
+            performance of consultants in a consistent and actionable manner.
+            Customers can post new engagements, interact and transact with their
+            approved suppliers, including the use of corporately-approved
+            Statement of Work templates.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button href={"/contact"}>Contact Us</Button>
-            <Button href={"/login"} accent>
+            <Button
+              target="_blank"
+              href={
+                "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+              }
+            >
+              Contact Us
+            </Button>
+            <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
             </Button>
           </div>
         </div>
       </div>
       {/* down arrow */}
-      <div className="flex justify-center -mt-14 mb-6 ">
+      <div className="flex justify-center -mt-[100px] mb-10 ">
         <div className="animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"

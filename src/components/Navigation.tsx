@@ -25,14 +25,14 @@ export function Navigation() {
         aria-label="Global"
       >
         {/* Desktop Navigation */}
-        <div className={`hidden lg:flex text-sm bg-white z-20 gap-8`}>
+        {/* <div className={`hidden lg:flex text-sm bg-white z-20 gap-8`}>
           {navigation_links.map((item, index) => (
             <NavLink {...item} key={item.name + index} />
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Navigation */}
-        <div
+        {/* <div
           className={`bg-white z-20 text-2xl flex fixed top-[0] pt-32 h-full w-full left-0 flex-col gap-8 lg:hidden ${
             isMenuOpen ? "block" : "hidden"
           }`}
@@ -40,7 +40,7 @@ export function Navigation() {
           {navigation_links.map((item, index) => (
             <NavLink {...item} key={item.name + index} />
           ))}
-        </div>
+        </div> */}
 
         <div className={`absolute top-4 left-4 md:left-8 lg:flex-1 z-20`}>
           <a href="/" className="flex gap-4">
@@ -65,7 +65,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="flex lg:hidden absolute top-4 right-4 z-20">
+        {/* <div className="flex lg:hidden absolute top-4 right-4 z-20">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -101,7 +101,7 @@ export function Navigation() {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </nav>
     </header>
   );
