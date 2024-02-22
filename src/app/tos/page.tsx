@@ -173,7 +173,7 @@ export default function Home() {
           <p>This document was last updated on June 2, 2021</p>
         </div>
       </SectionWrapper>
-      <ContactUs />
+      {/* <ContactUs /> */}
     </>
   );
 }

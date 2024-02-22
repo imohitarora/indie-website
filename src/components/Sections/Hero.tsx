@@ -74,9 +74,9 @@ export function Hero() {
             >
               Book a call
             </Button>
-            <Button href={"#features"} accent>
+            {/* <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

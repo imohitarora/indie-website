@@ -210,7 +210,7 @@ export default function Home() {
           <p>&nbsp;</p>
         </div>
       </SectionWrapper>
-      <ContactUs />
+      {/* <ContactUs /> */}
     </>
   );
 }
