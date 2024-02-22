@@ -21,8 +21,8 @@ export function Button({
     ? `inline-block rounded border border-gray-900 border-2 hover:border-primary-main font-bold hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-primary-dark`
     : `inline-block rounded border border-primary-main bg-primary-main font-bold text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-primary-dark`;
   const sizeClasses = small
-    ? "px-6 py-2 text-sm border-[1px]"
-    : "px-12 py-3 text-sm border-2";
+    ? "px-4 md:px-6 py-2 text-sm border-[1px]"
+    : "px-8 md:px-12 py-2 md:py-3 text-sm border-2";
 
   if (href) {
     return (

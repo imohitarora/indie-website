@@ -17,11 +17,11 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-100">
-      <div className="relative container mx-auto flex justify-between max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div className="relative container mx-auto flex flex-col sm:flex-row justify-between max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
         {/*  [Contact Email/Phone]. 
         Privacy Policy | Terms of Service | Follow us on [Social Media Icons] */}
 
-        <div className="">
+        <div className="flex flex-col sm:items-start">
           <a href="/" className="flex gap-4">
             <span className="sr-only">Indie Tech</span>
             <Image
@@ -46,7 +46,7 @@ export function Footer() {
             </a>
           </div>
         </div>
-        <div>
+        <div className="mt-8 sm:mt-0">
           <p className="pt-4 max-w-72 font-medium">
             Ready to elevate your consultant management game? Contact us at
           </p>
@@ -68,8 +68,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div>
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+        <div className="mt-8 sm:mt-0">
+          <p className="mb:mx-auto mt-6 max-w-md leading-relaxed text-gray-500 lg:text-left">
             Copyright &copy; {year}. All rights reserved.
             <br />
             <div className="flex gap-4 pt-2 font-medium underline">

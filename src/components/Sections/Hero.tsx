@@ -5,15 +5,22 @@ import { Button } from "../Button";
 export function Hero() {
   return (
     <div className="relative bg-white max-w-[100vw] overflow-hidden">
+      {/* TOP SVG */}
+      <HeroPattern
+        className="absolute rotate-90 -translate-y-1/2 md:hidden z-[0] origin-[center]"
+        color={colors.primary.main}
+        flip
+      />
+
       {/* SVG */}
       <HeroPattern
-        className="absolute z-[0] top-[60px] left-[-20%] lg:left-[-10%] scale-[0.6] 2xl:left-0 lg:scale-[0.7] xl:scale-[0.8] origin-[top_left]"
+        className="absolute hidden md:block z-[0] top-[60px] left-[-20%] lg:left-[-10%] scale-[0.6] 2xl:left-0 lg:scale-[0.7] xl:scale-[0.8] origin-[top_left]"
         color={colors.primary.main}
         flip
       />
       {/* -- */}
       <HeroPattern
-        className="absolute z-[0] bottom-0 right-[-20%] lg:right-[-10%] scale-[0.6] lg:scale-[0.7] xl:scale-[0.8] 2xl:right-0 origin-[bottom_right]"
+        className="absolute hidden md:block z-[0] bottom-0 right-[-20%] lg:right-[-10%] scale-[0.6] lg:scale-[0.7] xl:scale-[0.8] 2xl:right-0 origin-[bottom_right]"
         color={colors.primary.main}
       />
       {/*  */}
@@ -44,12 +51,12 @@ export function Hero() {
           </div>
         </div> */}
 
-        <div className="relative text-center z-20">
-          <div className="h-1 w-32 mx-auto mb-10 bg-primary-main" />
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+        <div className="relative md:text-center px-3 z-20 pt-10">
+          <div className="h-1 w-32 hidden md:block mx-auto mb-10 bg-primary-main" />
+          <h1 className=" text-3xl md:text-4xl font-bold tracking-tight sm:text-6xl">
             Enterprise Consultant Management
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 md:text-lg leading-8 text-gray-600">
             Our consultant platform helps enterprises manage and engage the
             consultants working for them across all divisions, from consulting
             companies to independent contractors. We track and report on the
@@ -58,7 +65,7 @@ export function Hero() {
             approved suppliers, including the use of corporately-approved
             Statement of Work templates.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex md:items-center md:justify-center gap-x-2 md:gap-x-6">
             <Button
               target="_blank"
               href={

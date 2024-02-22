@@ -44,7 +44,10 @@ export function ContactUs() {
                   <h3 className="text-lg font-medium ">Phone</h3>
                   <div className="flex items-center mt-2">
                     <FaPhone className="mr-2 text-primary-main" />
-                    <a href="416-912-3664" className="text-base text-gray-500">
+                    <a
+                      href="tel:416-912-3664"
+                      className="text-base text-gray-500"
+                    >
                       416-912-3664
                     </a>
                   </div>
@@ -54,7 +57,7 @@ export function ContactUs() {
                   <div className="flex items-center mt-2">
                     <FaEnvelope className="mr-2 text-primary-main" />
                     <a
-                      href="hello@indietech.ai"
+                      href="mailto:hello@indietech.ai"
                       className="text-base text-gray-500"
                     >
                       hello@indietech.ai
