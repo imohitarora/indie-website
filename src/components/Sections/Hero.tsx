@@ -72,7 +72,7 @@ export function Hero() {
                 "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
               }
             >
-              Contact Us
+              Book a call
             </Button>
             <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
