@@ -51,7 +51,7 @@ export function Hero() {
           </div>
         </div> */}
 
-        <div className="relative md:text-center px-3 z-20 pt-10">
+        <div className="relative md:text-center px-3 z-20 pt-10 md:pt-2">
           <div className="h-1 w-32 hidden md:block mx-auto mb-10 bg-primary-main" />
           <h1 className=" text-3xl md:text-4xl font-bold tracking-tight sm:text-6xl">
             Enterprise Consultant Management
