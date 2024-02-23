@@ -12,6 +12,8 @@ import { Metadata } from "next";
 import { Enterprise } from "@/components/Sections/Enterprise";
 import { Consultants } from "@/components/Sections/Consultants";
 import { ClientContent } from "@/components/Sections/ClientContent";
+import { Features } from "@/components/Sections/Features";
+import { HowItWorks } from "@/components/Sections/HowItWorks";
 
 export const metadata: Metadata = {
   title:
@@ -27,13 +29,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <VideoSection />
-      <ClientContent />
-      <CoreAspects />
-      {/* <Consultants />
-      <Enterprise /> */}
-      <BlogContent />
-      <ContactUs />
+      {/* <VideoSection /> */}
+      {/* <ClientContent /> */}
+      <Features />
+      {/* <CoreAspects /> */}
+      <HowItWorks />
+      {/* <BlogContent /> */}
+      {/* <ContactUs /> */}
     </main>
   );
 }

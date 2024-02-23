@@ -3,7 +3,7 @@ import { Footer } from "../Sections/Footer";
 import { HeroPattern } from "../svgs/HeroPattern";
 import { FeatureItem } from "./FeatureItem";
 
-export function Features() {
+export function SimpleFeatures() {
   const Foo = [
     {
       title: "A CURATED MARKETPLACE",
