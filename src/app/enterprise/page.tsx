@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main>
       <Enterprise />
-      <ContactUs />
+      {/* <ContactUs /> */}
     </main>
   );
 }

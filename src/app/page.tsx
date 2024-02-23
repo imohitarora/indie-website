@@ -35,7 +35,7 @@ export default function Home() {
       {/* <CoreAspects /> */}
       <HowItWorks />
       {/* <BlogContent /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
     </main>
   );
 }
