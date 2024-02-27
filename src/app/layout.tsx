@@ -18,11 +18,8 @@ export default function RootLayout({
         className={`${raleway.className} ${montserrat.className} text-gray-900`}
       >
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <div className="font-sans">
-          <Navigation />
-          {children}
-          <Footer />
-        </div>
+
+        <div>{children}</div>
       </body>
     </html>
   );

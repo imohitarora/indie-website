@@ -21,20 +21,20 @@ export function Navigation() {
       className={` ${isMenuOpen ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}
     >
       <nav
-        className="flex items-center h-[60px] justify-end px-6 p-4 lg:px-8 bg-white shadow-lg shadow-white border-b-[1px] border-gray-200 "
+        className="flex items-center h-[60px] justify-end px-6 p-4 lg:px-8 bg-white shadow-white border-b-[1px] border-gray-200 "
         aria-label="Global"
       >
         {/* Desktop Navigation */}
-        <div className={`hidden lg:flex text-sm bg-white z-20 gap-8`}>
+        {/* <div className={`lg:flex text-sm bg-white z-20 gap-8`}>
           {navigation_links.map((item, index) => (
             <NavLink {...item} key={item.name + index} />
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Navigation */}
         <div
-          className={`bg-white z-20 text-2xl flex fixed top-[0] pt-32 h-full w-full left-0 flex-col gap-8 lg:hidden ${
-            isMenuOpen ? "block" : "hidden"
+          className={`bg-white text-center z-20 text-2xl lg:text-sm flex fixed lg:relative top-[0] pt-32 lg:p-0 h-full lg:h-[unset] w-full lg:w-[unset] left-0 flex-col lg:flex-row gap-8  ${
+            isMenuOpen ? "block lg:flex" : "hidden lg:flex"
           }`}
         >
           {navigation_links.map((item, index) => (
@@ -63,6 +63,18 @@ export function Navigation() {
             /> */}
           </a>
         </div>
+
+        {/* <div className="flex absolute top-4 right-4 z-20">
+          <a
+            target="_blank"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            href={"https://portal.indietech.ai/login"}
+          >
+            <span className="font-serif font-bold text-lg capitalize ">
+              LOGIN
+            </span>
+          </a>
+        </div> */}
 
         {/* Mobile Menu Toggle */}
         <div className="flex lg:hidden absolute top-4 right-4 z-20">

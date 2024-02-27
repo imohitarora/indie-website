@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { SectionWrapper } from "./SectionWrapper";
+import { SmallHeader } from "./SmallHeader";
 
 export function ContactUs() {
   return (
@@ -12,12 +13,9 @@ export function ContactUs() {
         <div className="flex flex-col lg:flex-row">
           <div className="max-w-md mx-auto lg:mx-7 px-4 sm:px-6">
             <div>
-              <h2 className="pt-7 text-3xl font-extrabold ">
-                We have so much to share
-              </h2>
+              <SmallHeader noUnderline>We have so much to share</SmallHeader>
               <p className="pt-5">
-                We have launched early sign-ups with independent consultants.
-                Please join us today and create your profile.
+                Ready to elevate your consultant management game?
                 {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Incidunt consequuntur amet culpa cum itaque neque. */}
               </p>
@@ -44,7 +42,10 @@ export function ContactUs() {
                   <h3 className="text-lg font-medium ">Phone</h3>
                   <div className="flex items-center mt-2">
                     <FaPhone className="mr-2 text-primary-main" />
-                    <a href="416-912-3664" className="text-base text-gray-500">
+                    <a
+                      href="tel:416-912-3664"
+                      className="text-base text-gray-500"
+                    >
                       416-912-3664
                     </a>
                   </div>
@@ -54,7 +55,7 @@ export function ContactUs() {
                   <div className="flex items-center mt-2">
                     <FaEnvelope className="mr-2 text-primary-main" />
                     <a
-                      href="hello@indietech.ai"
+                      href="mailto:hello@indietech.ai"
                       className="text-base text-gray-500"
                     >
                       hello@indietech.ai

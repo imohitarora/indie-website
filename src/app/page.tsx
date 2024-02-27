@@ -12,6 +12,10 @@ import { Metadata } from "next";
 import { Enterprise } from "@/components/Sections/Enterprise";
 import { Consultants } from "@/components/Sections/Consultants";
 import { ClientContent } from "@/components/Sections/ClientContent";
+import { Features } from "@/components/Sections/Features";
+import { HowItWorks } from "@/components/Sections/HowItWorks";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Sections/Footer";
 
 export const metadata: Metadata = {
   title:
@@ -25,15 +29,19 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <VideoSection />
-      <ClientContent />
-      <CoreAspects />
-      {/* <Consultants />
-      <Enterprise /> */}
-      <BlogContent />
-      <ContactUs />
-    </main>
+    <>
+      <Navigation />
+      <main>
+        <Hero />
+        {/* <ClientContent /> */}
+        <Features />
+        {/* <CoreAspects /> */}
+        <VideoSection />
+        <HowItWorks />
+        <BlogContent />
+        {/* <ContactUs /> */}
+      </main>
+      <Footer />
+    </>
   );
 }

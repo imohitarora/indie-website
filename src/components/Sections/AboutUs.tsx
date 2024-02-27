@@ -8,7 +8,6 @@ import { SmallHeader } from "../SmallHeader";
 About Us
 
 
-
 Consulting Firms and Contingent Workforce Programs have their limitations for both clients and individual consultants. In the past there have been many stop-gap solutions:
 
 •    independent consultants
@@ -23,14 +22,47 @@ But none of these provided the solutions that really took a company to the next 
 We believe that we are better and stronger together. We bring the best talent to you at a fraction of the cost. We ensure your deliverables are met, our teams are managed and, most importantly, your challenges solved. It isn’t difficult to understand why Indie Tech has experienced rapid growth from our client networks. We provide the experienced solution to your biggest challenges.
 */
 
+const values = [
+  {
+    title: "Trust-worthy",
+    description:
+      "Trust us to be your partner in transforming the consulting experience.",
+  },
+  {
+    title: "Transparent",
+    description:
+      "Full transparency ensures focus on contractual obligations for all parties.",
+  },
+  {
+    title: "Community",
+    description:
+      "Continuous support in our environment helps everyone achieve their objectives.",
+  },
+  {
+    title: "Excellence",
+    description:
+      "Striving for excellence in all business disciplines to promote success and fulfillment.",
+  },
+  {
+    title: "Integrity",
+    description:
+      "Guided by honesty, we ensure transparent communication and actions at all times.",
+  },
+  {
+    title: "Empowerment",
+    description:
+      "Our platform empowers individuals to be thoughtful, communicative, and progressive.",
+  },
+];
+
 export function AboutUs() {
   return (
-    <SectionWrapper grey>
+    <SectionWrapper>
       <div
         id="about-us"
-        className="grid grid-cols-1 gap-14 lg:grid-cols-2 mx-auto "
+        className="grid pt-20 pb-12 grid-cols-1 gap-14 lg:grid-cols-2 mx-auto "
       >
-        <div className="max-w-2xl lg:mx-0">
+        <div className="max-w-2xl lg:mx-0 ">
           <SmallHeader>About Us</SmallHeader>
           <p className={`text-3xl leading-10 text-gray-600`}>
             We’ve sat down with our clients, we’ve listened, and now we have a
@@ -88,6 +120,18 @@ export function AboutUs() {
             network of consultants that have been hand-picked for your project.
           </p>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20">
+        {values.map((value, index) => (
+          <div
+            key={index}
+            className="bg-white p-4 rounded-md border-[1px] border-primary-main"
+          >
+            <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+            <p className="text-gray-700">{value.description}</p>
+          </div>
+        ))}
       </div>
     </SectionWrapper>
   );
