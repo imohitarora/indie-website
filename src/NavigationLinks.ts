@@ -1,14 +1,19 @@
 export const navigation_links = [
   { name: "Home", href: "/" },
-  {
-    name: "Clients",
-    href: "",
-    subMenu: [
-      { name: "Consultant", href: "/consultant" },
-      { name: "Enterprise", href: "/enterprise" },
-    ],
-  },
+  { name: "Consultancy", href: "/consultancy" },
+  { name: "Independent", href: "/independent" },
+  // {
+  //   name: "Clients",
+  //   href: "",
+  //   subMenu: [
+  //     { name: "Consultancy", href: "/consultancy" },
+  //     { name: "Independent", href: "/independent" },
+  //   ],
+  // },
   { name: "About Us", href: "/about-us" },
-  { name: "Contact Us", href: "#contact-us" },
+  {
+    name: "Login",
+    href: "https://portal.indietech.ai/login",
+  },
   // { name: "Company", href: "#" },
 ];

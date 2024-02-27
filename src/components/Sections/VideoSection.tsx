@@ -4,14 +4,15 @@ import { SmallHeader } from "../SmallHeader";
 
 export function VideoSection() {
   return (
-    <section className="pb-44 pt-6">
+    <section className="pb-4 md:pb-12 lg:pb-44 pt-6">
       <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative z-10 lg:py-16">
             {/*  */}
+
             <div className="absolute z-10 -top-5 -left-5 ">
               <svg
-                className="w-60 h-60  "
+                className=" w-32 h-32 lg:w-60 lg:h-60  "
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -32,7 +33,7 @@ export function VideoSection() {
                 className="absolute inset-0 object-cover"
               /> */}
               <img
-                className="absolute h-100 w-full "
+                className="lg:absolute h-full lg:h-[unset] lg:w-full "
                 src="/scrum_board_updated.svg"
                 alt="scrum_board_updated"
               />
@@ -53,7 +54,7 @@ export function VideoSection() {
               </Paragraph>
 
               <a
-                href="#"
+                href="#contact-us"
                 className="mt-8 inline-block rounded border border-primary-main bg-primary-main px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-indigo-500"
               >
                 Get in Touch

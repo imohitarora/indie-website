@@ -18,7 +18,7 @@ export function SectionWrapper({
         grey
           ? "bg-gray-100"
           : primary
-          ? "bg-primary-dark text-white"
+          ? "bg-primary-main text-white"
           : "bg-white"
       } 
       relative
@@ -27,7 +27,7 @@ export function SectionWrapper({
       <div
         className={`${
           noPadding ? "py-8" : "py-24"
-        } container mx-auto px-6 lg:px-8`}
+        } container mx-auto px-2 sm:px-6 lg:px-8`}
       >
         {children}
       </div>
