@@ -1,5 +1,5 @@
 export type Post = {
-  id: number;
+  _id: number;
   title: string;
   _updatedAt: string;
   slug: {

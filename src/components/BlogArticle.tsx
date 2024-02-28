@@ -14,7 +14,11 @@ export function BlogArticle({ post }: { post: Post }) {
         </div>
         <div className="flex max-w-xl flex-col items-start justify-between p-6 bg-white ">
           <div className="flex items-center gap-x-4 text-sm">
-            <time dateTime={post._updatedAt} className="text-gray-600 pt-2">
+            <time
+              dateTime={post._updatedAt}
+              className="text-gray-600 pt-2"
+              suppressHydrationWarning
+            >
               {new Date(post._updatedAt).toLocaleDateString()}
             </time>
             {/* <a
