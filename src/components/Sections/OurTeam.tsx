@@ -3,7 +3,7 @@ import { SmallHeader } from "../SmallHeader";
 
 export function OurTeam() {
   return (
-    <SectionWrapper grey>
+    <SectionWrapper>
       <div className="p-8 grid lg:grid-cols-2 gap-10">
         <div className="">
           <SmallHeader>Meet The Team</SmallHeader>
@@ -19,7 +19,7 @@ export function OurTeam() {
           <hr className="bg-grey-400 mb-4 mt-10" />
         </div>
         <div>
-          <h2 className="text-2xl text-gray-500 pt-6 mb-4">Core Team</h2>
+          <h2 className="text-2xl text-gray-400 pt-6 mb-4">Core Team</h2>
 
           {/* Founder & CEO */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mb-8">
@@ -62,7 +62,7 @@ export function OurTeam() {
           </div>
 
           {/*  */}
-          <h2 className="text-2xl text-gray-500 pt-6 mb-4">Advisory Team</h2>
+          <h2 className="text-2xl text-gray-400 pt-6 mb-4">Advisory Team</h2>
 
           {/* Advisory Team */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mb-8">

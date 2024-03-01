@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { SectionWrapper } from "../SectionWrapper";
 import { SmallHeader } from "../SmallHeader";
 import { colors } from "@/theme";
+import { fadeIn } from "@/lib/animation";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -38,15 +42,19 @@ export function HowItWorks() {
           <div className="flex flex-col gap-6 ">
             {features.map((feature, index) => {
               return (
-                <div
+                <motion.div
                   key={"hiw-features-" + index}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.8 }}
+                  variants={fadeIn({ delay: index * 0.3 })}
                   className="block border-l-2 border-primary-main pl-4 "
                 >
                   <p className="pb-1 font-bold ">
                     {feature.heading}. &nbsp;
                     <span className="font-normal ">{feature.text}</span>
                   </p>
-                </div>
+                </motion.div>
               );
             })}
           </div>

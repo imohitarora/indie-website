@@ -1,6 +1,10 @@
+"use client";
+
 import { colors, theme } from "@/theme";
 import { HeroPattern } from "../svgs/HeroPattern";
 import { Button } from "../Button";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/animation";
 
 export function Hero() {
   return (
@@ -52,10 +56,26 @@ export function Hero() {
         </div> */}
 
         <div className="relative md:text-center px-3 z-20 pt-10 md:pt-2">
-          <div className="h-1 w-32 hidden md:block mx-auto mb-10 bg-primary-main" />
+          <div className="h-1 w-32 hidden md:block mx-auto mb-10 ">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={{
+                offscreen: {
+                  width: 0,
+                },
+                onscreen: {
+                  width: "100%",
+                },
+              }}
+              className={`bg-primary-main h-1`}
+            />
+          </div>
           <h1 className=" text-3xl md:text-4xl font-bold tracking-tight sm:text-6xl">
             Enterprise Consultant Management
           </h1>
+
           <p className="mt-6 md:text-lg leading-8 text-gray-600">
             Our consultant platform helps enterprises manage and engage the
             consultants working for them across all divisions, from consulting
@@ -65,19 +85,26 @@ export function Hero() {
             approved suppliers, including the use of corporately-approved
             Statement of Work templates.
           </p>
-          <div className="mt-10 flex md:items-center md:justify-center gap-x-2 md:gap-x-6">
-            <Button
-              target="_blank"
-              href={
-                "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
-              }
-            >
-              Book a call
-            </Button>
-            {/* <Button href={"#features"} accent>
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            variants={fadeIn({ delay: 0.7, duration: 0.5, direction: "down" })}
+          >
+            <div className="mt-10 flex md:items-center md:justify-center gap-x-2 md:gap-x-6">
+              <Button
+                target="_blank"
+                href={
+                  "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+                }
+              >
+                Book a call
+              </Button>
+              {/* <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
             </Button> */}
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
       {/* down arrow */}

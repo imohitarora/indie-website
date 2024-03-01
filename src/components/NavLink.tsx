@@ -1,27 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { use, useEffect, useState } from "react";
 
 export type NavLinkProps = {
   name: string;
   href?: string;
+  target?: string;
   subMenu?: {
     name: string;
     href: string;
   }[];
 };
 
-export function NavLink({ name, href, subMenu }: NavLinkProps) {
+export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
   const [open, setOpen] = useState(false);
+  // next js get current path
+  const pathname = usePathname();
 
   return (
     <>
       <div key={name} className="relative" onClick={() => setOpen(!open)}>
         {href ? (
           <Link
+            target={target || "_self"}
             href={href}
-            className="mx-auto pt-8 lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-gray-200 border-b-4 hover:border-primary-main "
+            className={`mx-auto pt-8 pb-[1px] lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-b-[3px] ${
+              href !== pathname
+                ? "border-transparent hover:border-gray-200 "
+                : "border-primary-main "
+            }`}
           >
             {name}
           </Link>

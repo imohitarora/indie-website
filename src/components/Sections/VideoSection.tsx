@@ -1,6 +1,10 @@
+"use client";
+
 import { colors } from "@/theme";
 import { Paragraph } from "../Paragraph";
 import { SmallHeader } from "../SmallHeader";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/animation";
 
 export function VideoSection() {
   return (
@@ -10,7 +14,13 @@ export function VideoSection() {
           <div className="relative z-10 lg:py-16">
             {/*  */}
 
-            <div className="absolute z-10 -top-5 -left-5 ">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={fadeIn({ delay: 0 })}
+              className="absolute z-10 -top-5 -left-5 "
+            >
               <svg
                 className=" w-32 h-32 lg:w-60 lg:h-60  "
                 viewBox="0 0 200 200"
@@ -25,7 +35,7 @@ export function VideoSection() {
                   transform="translate(100 100)"
                 />
               </svg>
-            </div>
+            </motion.div>
             <div className="relative z-20 h-64 sm:h-80 lg:h-full">
               {/* <img
                 alt="House"
@@ -40,27 +50,34 @@ export function VideoSection() {
             </div>
           </div>
 
-          <div className="relative flex items-center bg-gray-100">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"></span>
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            variants={fadeIn({ delay: 0.6, duration: 1, direction: "down" })}
+          >
+            <div className="relative flex items-center bg-gray-100">
+              <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"></span>
 
-            <div className="p-8 sm:p-16 lg:p-24">
-              <SmallHeader>Meet Indie Tech</SmallHeader>
+              <div className="p-8 sm:p-16 lg:p-24">
+                <SmallHeader>Meet Indie Tech</SmallHeader>
 
-              <Paragraph>
-                Indie Tech is the first automated consulting management system
-                uniting consultants and clients. This innovative platform will
-                manage contract deliverables and supplier risk while consultants
-                and clients connect towards the same goals.
-              </Paragraph>
+                <Paragraph>
+                  Indie Tech is the first automated consulting management system
+                  uniting consultants and clients. This innovative platform will
+                  manage contract deliverables and supplier risk while
+                  consultants and clients connect towards the same goals.
+                </Paragraph>
 
-              <a
-                href="#contact-us"
-                className="mt-8 inline-block rounded border border-primary-main bg-primary-main px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-indigo-500"
-              >
-                Get in Touch
-              </a>
+                <a
+                  href="#contact-us"
+                  className="mt-8 inline-block rounded border border-primary-main bg-primary-main px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-indigo-500"
+                >
+                  Get in Touch
+                </a>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

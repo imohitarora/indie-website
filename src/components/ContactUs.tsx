@@ -43,6 +43,7 @@ export function ContactUs() {
                   <div className="flex items-center mt-2">
                     <FaPhone className="mr-2 text-primary-main" />
                     <a
+                      target="_blank"
                       href="tel:416-912-3664"
                       className="text-base text-gray-500"
                     >
@@ -55,6 +56,7 @@ export function ContactUs() {
                   <div className="flex items-center mt-2">
                     <FaEnvelope className="mr-2 text-primary-main" />
                     <a
+                      target="_blank"
                       href="mailto:hello@indietech.ai"
                       className="text-base text-gray-500"
                     >
