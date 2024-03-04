@@ -2,11 +2,13 @@ import { colors } from "@/theme";
 
 export function SectionWrapper({
   children,
+  className,
   grey,
   primary,
   noPadding,
 }: {
   children: React.ReactNode;
+  className?: string;
   grey?: boolean;
   primary?: boolean;
   noPadding?: boolean;
@@ -21,7 +23,7 @@ export function SectionWrapper({
           ? "bg-primary-main text-white"
           : "bg-white"
       } 
-      relative
+      relative ${className}
   `}
     >
       <div

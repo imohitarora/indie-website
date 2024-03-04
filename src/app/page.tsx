@@ -7,7 +7,7 @@ import { FinancialServicesSection } from "@/components/Sections/FinancialService
 import { OurClients } from "@/components/Sections/OurClients";
 import { Testimonials } from "@/components/Sections/Testimonial";
 import { VideoSection } from "@/components/Sections/VideoSection";
-import { BlogContent } from "@/components/Sections/BlogContent";
+import { BlogContent } from "@/components/Sections/BlogContent/BlogContent";
 import { Metadata } from "next";
 import { Enterprise } from "@/components/Sections/Enterprise";
 import { Consultants } from "@/components/Sections/Consultants";

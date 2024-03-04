@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { FaLightbulb, FaClipboardCheck, FaBook } from "react-icons/fa";
 import { SectionWrapper } from "../SectionWrapper";
 import { SmallHeader } from "../SmallHeader";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/animation";
+import { TypeWriter } from "../TypeWriter";
 
 /*
 About Us
@@ -57,19 +60,20 @@ const values = [
 
 export function AboutUs() {
   return (
-    <SectionWrapper>
-      <div
-        id="about-us"
-        className="grid pt-20 pb-12 grid-cols-1 gap-14 lg:grid-cols-2 mx-auto "
-      >
-        <div className="max-w-2xl lg:mx-0 ">
-          <SmallHeader>About Us</SmallHeader>
-          <p className={`text-3xl leading-10 text-gray-600`}>
-            We’ve sat down with our clients, we’ve listened, and now we have a
-            tailored consulting solution to fit your exacting needs.
-          </p>
+    <>
+      <SectionWrapper>
+        <div
+          id="about-us"
+          className="grid pt-20 pb-12 grid-cols-1 gap-14 lg:grid-cols-2 mx-auto "
+        >
+          <div className="max-w-2xl lg:mx-0 ">
+            <SmallHeader>About Us</SmallHeader>
+            <p className={`text-3xl leading-10 text-gray-600`}>
+              We’ve sat down with our clients, we’ve listened, and now we have a
+              tailored consulting solution to fit your exacting needs.
+            </p>
 
-          {/* <p className="text-lg leading-8 text-gray-600">
+            {/* <p className="text-lg leading-8 text-gray-600">
             Consulting Firms and Contingent Workforce Programs have their
             limitations for both clients and individual consultants. In the past
             there have been many stop-gap solutions:
@@ -91,9 +95,9 @@ export function AboutUs() {
             client networks. We provide the experienced solution to your biggest
             challenges.
           </p> */}
-        </div>
-        <div className="flex flex-col justify-end ">
-          {/* <div className="py-4 flex justify-end">
+          </div>
+          <div className="flex flex-col justify-end ">
+            {/* <div className="py-4 flex justify-end">
             <svg
               width="275"
               height="21"
@@ -110,29 +114,47 @@ export function AboutUs() {
             </svg>
           </div> */}
 
-          <p className="">
-            As the complexity of a project grows your business teams can be
-            stretched thin. Sometimes having the right subject matter expertise
-            or experience is all that’s required to turn a project from
-            struggles to success. It is no longer prudent to bring in big
-            consulting firms, and contingent workforce programs don’t have the
-            strategic talent you need to get your projects done. Indie Tech is a
-            network of consultants that have been hand-picked for your project.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20">
-        {values.map((value, index) => (
-          <div
-            key={index}
-            className="bg-white p-4 rounded-md border-[1px] border-primary-main"
-          >
-            <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-            <p className="text-gray-700">{value.description}</p>
+            <TypeWriter
+              text={`
+                As the complexity of a project grows your business teams can be
+                stretched thin. Sometimes having the right subject matter
+                expertise or experience is all that’s required to turn a project
+                from struggles to success. It is no longer prudent to bring in
+                big consulting firms, and contingent workforce programs don’t
+                have the strategic talent you need to get your projects done.
+                Indie Tech is a network of consultants that have been
+                hand-picked for your project.
+              `}
+            />
           </div>
-        ))}
-      </div>
-    </SectionWrapper>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper className=" -translate-y-28">
+        <div className="relative z-20 grid grid-cols-1 md:grid-cols-2 gap-6 pt-20">
+          {values.map((value, index) => (
+            <motion.div
+              key={"features-" + index}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={fadeIn({ delay: index * 0.2, direction: "left" })}
+              className="bg-white p-4 rounded-md border-[1px] border-primary-main shadow-effect shadow-primary-main/20"
+            >
+              <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+              <p className="text-gray-700">{value.description}</p>
+            </motion.div>
+          ))}
+        </div>
+        <div
+          style={{
+            backgroundImage: "url(/bg-grid.svg)",
+            backgroundSize: "20px",
+            boxShadow: "rgb(255, 255, 255) 0px 30px 20px 60px inset",
+          }}
+          className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
+        />
+      </SectionWrapper>
+    </>
   );
 }

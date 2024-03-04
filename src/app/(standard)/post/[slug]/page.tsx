@@ -6,8 +6,10 @@ import { PortableText } from "@portabletext/react";
 import { SmallHeader } from "@/components/SmallHeader";
 import Link from "next/link";
 
-export default async function page(props: any) {
-  const query = `*[_type == "post"] | order(_createdAt desc) [0] {
+export default async function page(context: any) {
+  const slug = context.params.slug;
+
+  const query = `*[_type == "post" && slug.current == $slug][0] {
       _id,
       title,
       slug,
@@ -22,7 +24,7 @@ export default async function page(props: any) {
     }
   `;
 
-  const post: Post = await client.fetch(query, {});
+  const post: Post = await client.fetch(query, { slug });
   return (
     <SectionWrapper>
       {/* backbutton */}

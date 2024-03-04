@@ -13,6 +13,7 @@ export const navigation_links = [
   { name: "About Us", href: "/about-us" },
   {
     name: "Login",
+    target: "_blank",
     href: "https://portal.indietech.ai/login",
   },
   // { name: "Company", href: "#" },

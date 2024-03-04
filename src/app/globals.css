@@ -20,5 +20,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'montserrat', sans-serif;
 }
 
+.shadow-effect {
+  --tw-shadow-colored: 0 2px 20px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 
+/* Animations */
 
+@keyframes blink {
+  50%, 100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+}
+.animate-blink {
+  animation: blink 0.4s ease-in-out infinite;
+}

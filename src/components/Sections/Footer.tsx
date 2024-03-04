@@ -41,11 +41,17 @@ export function Footer() {
             <p className="pt-4 max-w-72 font-medium">Follow us on</p>
             <div className="flex gap-5 pt-4">
               {/* linked react-icons */}
-              <a href="https://www.linkedin.com/company/indie-tech/about/">
+              <a
+                href="https://www.linkedin.com/company/indie-tech/about/"
+                target="_blank"
+              >
                 <FaLinkedin className="h-7 w-7 hover:text-primary-main" />
               </a>
               <a href="https://www.instagram.com/indie.tech.ai/">
-                <FaInstagram className="h-7 w-7 hover:text-primary-main" />
+                <FaInstagram
+                  className="h-7 w-7 hover:text-primary-main"
+                  target="_blank"
+                />
               </a>
             </div>
           </div>
@@ -78,12 +84,14 @@ export function Footer() {
               <div className="flex gap-4 pt-2 font-medium underline">
                 <Link
                   className="text-gray-700 transition hover:text-primary-main "
+                  target="_blank"
                   href={"/tos"}
                 >
                   Terms of Service
                 </Link>
                 <Link
                   className="text-gray-700 transition hover:text-primary-main "
+                  target="_blank"
                   href={"/privacy"}
                 >
                   Privacy Policy
