@@ -134,10 +134,7 @@ export default function Page() {
         </div>
       </SectionWrapper>
       {/*  */}
-      <Features
-        contents={featureItems}
-        title={"Effortless Consultant Management Solutions"}
-      />
+      <Features contents={featureItems} title={"How It Works"} />
       {/*  */}
       <CenterBlock
         title={"Why Choose Indie Tech "}
