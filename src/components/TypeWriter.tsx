@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 
@@ -13,7 +15,7 @@ export function TypeWriter({ text, speed = 20 }: TypeWriterProps) {
   useEffect(() => {
     let currentIndex = 0;
     const interval = setInterval(() => {
-      if (currentIndex < text.length) {
+      if (currentIndex < text.length - 1) {
         setDisplayText((prevText) => prevText + text[currentIndex]);
         currentIndex++;
       } else {
