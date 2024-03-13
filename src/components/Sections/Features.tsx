@@ -7,30 +7,26 @@ import { FaListCheck, FaRankingStar } from "react-icons/fa6";
 import { Variants, motion } from "framer-motion";
 import { fadeIn } from "@/lib/animation";
 
-export function Features() {
-  const features = [
-    {
-      heading: "Comprehensive Consultant Management",
-      text: "Manage and engage consultants across all divisions with ease, from consulting companies to independent contractors.",
-      icon: FaListCheck,
-    },
-    {
-      heading: "Performance Tracking",
-      text: "Gain a deep understanding of consultant performance through our robust tracking and reporting features.",
-      icon: FaRankingStar,
-    },
-    {
-      heading: "Engage with Approved Suppliers",
-      text: "Post new engagements, interact, and transact seamlessly with your approved suppliers, using corporately-approved Statement of Work templates.",
-      icon: FaStamp,
-    },
-  ];
-
+export function Features({
+  contents,
+  title,
+}: {
+  title: string;
+  contents: { title: string; description: string }[];
+}) {
   return (
     <SectionWrapper>
-      <div className="relative z-20">
+      <div
+        style={{
+          backgroundImage: "url(/bg-grid.svg)",
+          backgroundSize: "20px",
+          boxShadow: "rgb(255, 255, 255) 0px 30px 80px 90px inset",
+        }}
+        className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
+      />
+      <div className="relative z-30">
         <div id="features" className="block max-w-lg text-left">
-          <SmallHeader>Effortless Consultant Management Solutions</SmallHeader>
+          <SmallHeader>{title} </SmallHeader>
           {/* <p className="mt-4 pb-10">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
           aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit
@@ -39,7 +35,7 @@ export function Features() {
         </div>
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((item, index) => {
+          {contents.map(({ title, description }, index) => {
             return (
               <motion.div
                 key={"features-" + index}
@@ -56,24 +52,16 @@ export function Features() {
                       {/* arrow */}
                       {">"}
                     </span>{" "}
-                    {item.heading}
+                    {title}
                   </h2>
 
-                  <p className="mt-auto pt-1 text-sm ">{item.text}</p>
+                  <p className="mt-auto pt-1 text-sm ">{description}</p>
                 </div>
               </motion.div>
             );
           })}
         </div>
       </div>
-      <div
-        style={{
-          backgroundImage: "url(/bg-grid.svg)",
-          backgroundSize: "20px",
-          boxShadow: "rgb(255, 255, 255) 0px 30px 80px 90px inset",
-        }}
-        className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
-      />
     </SectionWrapper>
   );
 }

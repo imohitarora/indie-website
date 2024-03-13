@@ -2,7 +2,7 @@ import { ContactUs } from "@/components/ContactUs";
 
 import { Metadata } from "next";
 import { Enterprise } from "@/components/Sections/Enterprise";
-import { SimpleFeatures } from "@/components/FeaturesSection/Features";
+import { SimpleFeatures } from "@/components/FeaturesSection/SimpleFeatures";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { SmallHeader } from "@/components/SmallHeader";
 import { Button } from "@/components/Button";

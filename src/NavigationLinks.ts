@@ -1,6 +1,6 @@
 export const navigation_links = [
   { name: "Home", href: "/" },
-  { name: "Consultancy", href: "/consultancy" },
+  { name: "Services Firm", href: "/services-firm" },
   { name: "Independent", href: "/independent" },
   // {
   //   name: "Clients",

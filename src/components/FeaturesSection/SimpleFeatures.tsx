@@ -1,7 +1,5 @@
-import { colors } from "@/theme";
-import { Footer } from "../Sections/Footer";
-import { HeroPattern } from "../svgs/HeroPattern";
 import { FeatureItem } from "./FeatureItem";
+import { SectionWrapper } from "../SectionWrapper";
 
 export function SimpleFeatures({
   featureItems,
@@ -16,7 +14,7 @@ export function SimpleFeatures({
   description: string;
 }) {
   return (
-    <section className="relative">
+    <SectionWrapper>
       <div className="flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
           <div className="w-full mx-auto">
@@ -30,6 +28,6 @@ export function SimpleFeatures({
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
