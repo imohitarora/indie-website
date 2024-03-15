@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaMailBulk,
   FaMailchimp,
+  FaMapMarkerAlt,
   FaPhone,
 } from "react-icons/fa";
 import Link from "next/link";
@@ -18,9 +19,9 @@ export function Footer() {
 
   return (
     <>
-      <ContactUs />
-      <footer className="bg-gray-100">
-        <div className="relative container mx-auto flex flex-col sm:flex-row justify-between max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      {/* <ContactUs /> */}
+      <footer className="bg-gray-100 border-t-2 border-gray-200">
+        <div className="relative container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           {/*  [Contact Email/Phone]. 
         Privacy Policy | Terms of Service | Follow us on [Social Media Icons] */}
 
@@ -55,8 +56,9 @@ export function Footer() {
               </a>
             </div>
           </div>
-          {/* <div className="mt-8 sm:mt-0">
-            <p className="pt-4 max-w-72 font-medium">
+
+          <div className="">
+            <p className=" max-w-72 font-medium">
               Ready to elevate your consultant management game? Contact us at
             </p>
             <div className="flex flex-col gap-1 pt-4 font-medium">
@@ -74,11 +76,18 @@ export function Footer() {
                 <FaPhone className="h-4 w-4 mr-3 inline-block" />
                 416-912-3664
               </a>
+              <div>
+                <FaMapMarkerAlt className="mr-2 mb-7 text-primary-main inline-block" />
+                <p className="text-base text-gray-500 inline-block">
+                  140 Yonge Street #200,
+                  <br /> Toronto, ON M5C 1X6
+                </p>
+              </div>
             </div>
-          </div> */}
+          </div>
 
-          <div className="mt-8 sm:mt-0">
-            <p className="mb:mx-auto mt-6 max-w-md leading-relaxed text-gray-500 lg:text-left">
+          <div className="">
+            <div className="mb:mx-auto max-w-md leading-relaxed text-gray-500 lg:text-left">
               Copyright &copy; {year}. All rights reserved.
               <br />
               <div className="flex gap-4 pt-2 font-medium underline">
@@ -97,12 +106,41 @@ export function Footer() {
                   Privacy Policy
                 </Link>
               </div>
-            </p>
+            </div>
+            {/* Nav Links */}
+            <div>
+              <strong className="pt-10 block">Links</strong>
+              <ul className="flex flex-wrap gap-x-6 gap-y-2 whitespace-nowrap">
+                {navigation_links.map(({ name, href, subMenu }, index) =>
+                  !subMenu ? (
+                    <li key={"footer-nav-link-" + index}>
+                      <Link
+                        className="text-gray-700 transition hover:text-primary-main"
+                        href={href}
+                      >
+                        {name}
+                      </Link>
+                    </li>
+                  ) : (
+                    subMenu.map(({ name, href }, subDex) => (
+                      <li key={"footer-nav-link-" + subDex}>
+                        <Link
+                          className="text-gray-700 transition hover:text-primary-main"
+                          href={href}
+                        >
+                          {name}
+                        </Link>
+                      </li>
+                    ))
+                  )
+                )}
+              </ul>
+            </div>
           </div>
 
           <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
             <a
-              className="inline-block rounded-full bg-primary-main hover:bg-primary-dark p-2 text-white shadow transition hover:bg-primary-dark-500 sm:p-3 lg:p-4"
+              className="inline-block rounded-full border-2 border-primary-dark hover:bg-primary-dark hover:text-white p-2 text-primary-dark shadow transition hover:bg-primary-dark-500 sm:p-3 lg:p-4"
               href="#Top"
             >
               <span className="sr-only">Back to top</span>

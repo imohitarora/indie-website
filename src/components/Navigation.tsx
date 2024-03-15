@@ -21,19 +21,12 @@ export function Navigation() {
       className={` ${isMenuOpen ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}
     >
       <nav
-        className="flex items-center h-[60px] justify-end px-6 p-4 lg:px-8 bg-white shadow-white border-b-[1px] border-gray-200 "
+        className="flex lg:items-center h-[60px] justify-end px-6 p-4 lg:px-8 bg-white shadow-white border-b-[1px] border-gray-200 "
         aria-label="Global"
       >
-        {/* Desktop Navigation */}
-        {/* <div className={`lg:flex text-sm bg-white z-20 gap-8`}>
-          {navigation_links.map((item, index) => (
-            <NavLink {...item} key={item.name + index} />
-          ))}
-        </div> */}
-
         {/* Mobile Navigation */}
         <div
-          className={`bg-white text-center z-20 text-2xl lg:text-sm flex fixed lg:relative top-[0] pt-32 lg:p-0 h-full lg:h-[unset] w-full lg:w-[unset] left-0 flex-col lg:flex-row gap-8  ${
+          className={`bg-white  z-20 text-2xl lg:text-sm flex fixed lg:relative top-[0] pt-32 lg:p-0 h-full lg:h-[unset] w-full lg:w-[unset] left-0 flex-col lg:flex-row gap-8  ${
             isMenuOpen ? "block lg:flex" : "hidden lg:flex"
           }`}
         >

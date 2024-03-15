@@ -130,8 +130,13 @@ export function AboutUs() {
         At Indie Tech, we invite enterprises, consulting firms, and independent consultants to join us in shaping the future of consulting. Whether you're seeking efficient consultant management, growth opportunities, or unparalleled career advancement, we're here to redefine collaboration, elevate careers, and unlock new possibilities.
         `}
       >
-        <Button className="mb-12" href={"#contact-us"}>
-          Join Us
+        <Button
+          target="_blank"
+          href={
+            "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+          }
+        >
+          Book a call
         </Button>
       </CenterBlock>
       {/*  */}

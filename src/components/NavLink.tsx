@@ -1,8 +1,9 @@
-"use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { use, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { BiDownArrow } from "react-icons/bi";
+import { FaSortDown } from "react-icons/fa";
 
 export type NavLinkProps = {
   name: string;
@@ -15,57 +16,90 @@ export type NavLinkProps = {
 };
 
 export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
-  const [open, setOpen] = useState(false);
-  // next js get current path
+  const [openSubMenu, setOpenSubMenu] = useState(false);
   const pathname = usePathname();
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const largeScreen = useMemo(() => screenWidth > 1024, [screenWidth]);
+
+  const linkClassName = `whitespace-nowrap cursor-pointer pt-8 pb-[1px] lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-b-[3px] ${
+    href === "" || href !== pathname
+      ? "border-transparent hover:border-gray-200 "
+      : "border-primary-main "
+  }`;
+
+  const renderSubMenu = () => {
+    if (!subMenu || !largeScreen || !openSubMenu) {
+      return null;
+    }
+
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={openSubMenu ? { opacity: 1 } : { opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute top-full flex flex-col gap-2 py-3 px-5 -left-5 mt-2 bg-white shadow-lg border-[1px] border-gray-200 border-t-0"
+        onMouseLeave={() => setOpenSubMenu(false)}
+        style={{
+          display: openSubMenu ? "flex" : "none",
+        }}
+      >
+        {subMenu.map((subItem) => (
+          <Link
+            key={subItem.name}
+            href={subItem.href}
+            className={linkClassName}
+          >
+            {subItem.name}
+          </Link>
+        ))}
+      </motion.div>
+    );
+  };
 
   return (
-    <>
-      <div key={name} className="relative" onClick={() => setOpen(!open)}>
-        {href ? (
-          <Link
-            target={target || "_self"}
-            href={href}
-            className={`mx-auto pt-8 pb-[1px] lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-b-[3px] ${
-              href !== pathname
-                ? "border-transparent hover:border-gray-200 "
-                : "border-primary-main "
-            }`}
+    <div className="relative mx-auto min-w-[170px] lg:min-w-[55px] text-center">
+      {href ? (
+        <Link target={target || "_self"} href={href} className={linkClassName}>
+          {name}
+        </Link>
+      ) : (
+        <div className="flex flex-col justify-center items-center ">
+          <div
+            onClick={() => setOpenSubMenu(!openSubMenu)}
+            className={"flex " + linkClassName}
           >
+            <FaSortDown className="-mt-1.5 md:mt-0 mr-4 opacity-50" />
             {name}
-          </Link>
-        ) : (
-          <div>
-            <p className="mx-auto cursor-pointer pt-8 lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-gray-200 border-b-4 hover:border-primary-main ">
-              {name}
-            </p>
           </div>
-        )}
-
-        {subMenu && open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={open ? { opacity: 1 } : { opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-full flex flex-col gap-2 p-3 left-0 mt-2 bg-white shadow-lg"
-            onMouseLeave={() => setOpen(false)}
-            style={{
-              display: open ? "flex" : "none",
-            }}
-          >
-            {subMenu.map((subItem) => (
+          {subMenu &&
+            !largeScreen &&
+            openSubMenu &&
+            subMenu.map((subItem, index) => (
               <Link
-                key={subItem.name}
+                key={subItem.name + "-" + index}
                 href={subItem.href}
-                className="mx-auto pt-8 lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 hover:border-primary-main "
+                className={linkClassName}
               >
                 {subItem.name}
               </Link>
             ))}
-          </motion.div>
-        )}
-      </div>
-    </>
+        </div>
+      )}
+
+      {renderSubMenu()}
+    </div>
   );
 }
