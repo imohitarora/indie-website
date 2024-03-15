@@ -10,11 +10,9 @@ import Image from "next/image";
 import { CgPlayButton } from "react-icons/cg";
 
 export function Hero() {
-  const [showVideo, setShowVideo] = useState(false);
-
   return (
-    <div className=" bg-white max-w-[100vw] overflow-hidden">
-      <div className="relative grid lg:grid-cols-2 lg:gap-14 pb-20">
+    <section className=" bg-white max-w-[100vw] overflow-hidden container">
+      <div className="relative grid lg:grid-cols-2 lg:gap-14 pb-20 xl:pt-12">
         {/* content div */}
         <div className="relative mx-auto max-w-2xl pt-32 pb-20 sm:pt-48 sm:pb-32 lg:py-56 ">
           {/* HIDDEN FOR NOW */}
@@ -90,81 +88,37 @@ export function Hero() {
         </div>
 
         {/*  */}
-        {/* app-screenshot-landing.png */}
 
-        <div className="relative my-auto cursor-pointer p-4 pb-44 lg:p-0 ">
-          <div
-            onClick={() => setShowVideo(true)}
-            className="transform lg:translate-x-[80px] lg:scale-125 xl:scale-1"
-          >
-            <Image
-              className="-mr-20 rounded-md border-[5px] border-gray-200 "
-              src="/app-screenshot-landing.png"
-              alt="app-screenshot-landing"
-              width={1200}
-              height={800}
-            />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20">
-              {/* play button icon */}
-              <CgPlayButton className=" text-white w-10 h-10 transform scale-110 translate-x-[1px]" />
+        <div className="relative my-auto cursor-pointer p-4 pb-44 lg:p-0 pt-28 lg:pt-0">
+          <div className="relative">
+            <div className="absolute xl:hidden z-30 -top-12 md:-top-24 xl:-top-32 lg:-left-8 xl:-left-24">
+              <Image
+                src="/ComicText.png"
+                alt="comic-text"
+                width={200}
+                height={28}
+              />
+              <Image
+                className="mt-2 ml-7"
+                src="/ComicArrow.png"
+                alt="comic-arrow"
+                width={120}
+                height={70}
+              />
+            </div>
+            <div className="relative mx-auto">
+              <iframe
+                className="rounded-md border-[5px] border-gray-200 h-[300px] sm:h-[500px] w-full min-w-[340px] lg:w-[780px] xl:w-[880px]"
+                src="https://www.youtube.com/embed/qpf5PGOK6nY?si=wpcX9mJIdL2pRlYC"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
-        {/* Video Modal */}
-        {showVideo && (
-          <motion.div
-            initial="closed"
-            className="fixed w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/90 rounded-md z-50"
-            animate={showVideo ? "open" : "closed"}
-            variants={{
-              open: {
-                opacity: 1,
-                display: "block",
-                left: "50%",
-              },
-              closed: {
-                opacity: 0,
-                display: "none",
-                left: "100%",
-              },
-            }}
-          >
-            <div
-              className="absolute top-0 right-0 p-4 cursor-pointer bg-black/55 rounded-full"
-              onClick={() => setShowVideo(false)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
-
-            <div className="p-[2%] md:p-[4%] h-full">
-              <iframe
-                src="https://www.loom.com/embed/b260db9428ca499892e6b471ab10c4ef?sid=2e4d3d78-0983-40ef-9677-40bc217709b4"
-                // webkitallowfullscreen="true"
-                // mozallowfullscreen="true"
-                allowFullScreen
-                style={{
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </div>
-          </motion.div>
-        )}
       </div>
-      {/* ^ end of grid wrapper */}
       {/* down arrow */}
       <div className="flex justify-center -mt-[100px] mb-10 ">
         <div className="animate-bounce">
@@ -184,6 +138,6 @@ export function Hero() {
           </svg>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
