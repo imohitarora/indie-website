@@ -7,7 +7,6 @@ import { SectionWrapper } from "@/components/SectionWrapper";
 import { SmallHeader } from "@/components/SmallHeader";
 import { Button } from "@/components/Button";
 import Image from "next/image";
-import { TypeWriter } from "@/components/TypeWriter";
 import { Features } from "@/components/Sections/Features";
 import { CenterBlock } from "@/components/Sections/CenterBlock";
 
@@ -102,16 +101,16 @@ export default function Page() {
                   width={900}
                   height={600}
                   src="/pexels-photo-2977565.jpeg "
-                  className="absolute inset-0 w-full object-cover rounded"
+                  className="absolute inset-0 md:max-h-[27rem] w-full object-cover rounded"
                 />
               </div>
             </div>
 
-            <div className="relative flex items-center bg-white pt-[420px] xl:pt-2 rounded lg:rounded-none">
+            <div className="relative flex items-center bg-white pt-[68%] md:pt-[420px] xl:pt-2 rounded lg:rounded-none">
               <span className="hidden xl:absolute xl:inset-y-0 xl:-start-16 xl:block xl:w-16 xl: bg-white"></span>
 
-              <div className="p-2 sm:p-8 md:p-16 xl:p-24 text-common-black ">
-                <SmallHeader>
+              <div className="p-2 sm:p-8 md:p-16 xl:p-24 text-common-black  ">
+                <SmallHeader className="max-w-[640px]">
                   Empower Your Independent Consulting Career with Indie Tech
                 </SmallHeader>
 
@@ -125,8 +124,14 @@ export default function Page() {
                   dedicated management support.
                 </p>
 
-                <Button className="mt-20" href="#contact-us">
-                  Contact Us
+                <Button
+                  target="_blank"
+                  className="mt-12"
+                  href={
+                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+                  }
+                >
+                  Book a call
                 </Button>
               </div>
             </div>
@@ -136,12 +141,6 @@ export default function Page() {
       {/*  */}
       <Features contents={featureItems} title={"How It Works"} />
       {/*  */}
-      <CenterBlock
-        title={"Why Choose Indie Tech "}
-        description={`
-          Indie Tech offers independent consultants a unique ecosystem. From global market access to transparent pricing and automated engagements, we provide the tools you need to thrive in the consulting industry.
-        `}
-      />
       <SectionWrapper grey className="pt-20 pb-12">
         <SimpleFeatures
           featureItems={HowItWorksContents}

@@ -85,16 +85,16 @@ export default function Page() {
                   width={900}
                   height={600}
                   src="/pexels-the-coach-space-2977547.jpg"
-                  className="absolute inset-0 w-full object-cover rounded"
+                  className="absolute inset-0 md:max-h-[27rem] w-full  object-cover rounded"
                 />
               </div>
             </div>
 
-            <div className="relative flex items-center bg-white pt-[420px] xl:pt-2 rounded lg:rounded-none">
+            <div className="relative flex items-center bg-white pt-[68%] md:pt-[420px] xl:pt-2 rounded lg:rounded-none">
               <span className="hidden xl:absolute xl:inset-y-0 xl:-start-16 xl:block xl:w-16 xl: bg-white"></span>
 
               <div className="p-8 sm:p-16 xl:p-24 text-common-black ">
-                <SmallHeader>
+                <SmallHeader className="max-w-[640px]">
                   Elevate Your Consulting Business with Indie Tech
                 </SmallHeader>
 
@@ -106,9 +106,14 @@ export default function Page() {
                   streamline engagements, interact directly with clients, and
                   automate the entire process.
                 </p>
-
-                <Button className="mt-20" href="#contact-us">
-                  Contact Us
+                <Button
+                  className="mt-12"
+                  target="_blank"
+                  href={
+                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+                  }
+                >
+                  Book a call
                 </Button>
               </div>
             </div>

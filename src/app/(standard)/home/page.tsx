@@ -69,7 +69,7 @@ const features = [
     // icon: FaRankingStar,
   },
   {
-    title: "Engage with Approved Suppliers",
+    title: "Collaborate With Your Approved Supplier",
     description:
       "Post new engagements, interact, and transact seamlessly with your approved suppliers, using corporately-approved Statement of Work templates.",
     // icon: FaStamp,
