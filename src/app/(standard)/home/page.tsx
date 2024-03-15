@@ -6,7 +6,7 @@ import { AboutUs } from "@/components/Sections/AboutUs";
 import { FinancialServicesSection } from "@/components/Sections/FinancialServices";
 import { OurClients } from "@/components/Sections/OurClients";
 import { Testimonials } from "@/components/Sections/Testimonial";
-import { VideoSection } from "@/components/Sections/VideoSection";
+import { FeaturedSection } from "@/components/Sections/FeaturedSection";
 import { BlogContent } from "@/components/Sections/BlogContent/BlogContent";
 import { Metadata } from "next";
 import { Enterprise } from "@/components/Sections/Enterprise";
@@ -88,7 +88,7 @@ export default function Home() {
           title={"Effortless Consultant Management Solutions"}
         />
         {/* <CoreAspects /> */}
-        <VideoSection />
+        <FeaturedSection />
         <HowItWorks
           title="How Indie Tech Works for Your Enterprise"
           contents={HowItWorksContents}
