@@ -77,13 +77,13 @@ export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
         </Link>
       ) : (
         <div className="flex flex-col justify-center items-center ">
-          <p
+          <div
             onClick={() => setOpenSubMenu(!openSubMenu)}
             className={"flex " + linkClassName}
           >
             <FaSortDown className="-mt-1.5 md:mt-0 mr-4 opacity-50" />
             {name}
-          </p>
+          </div>
           {subMenu &&
             !largeScreen &&
             openSubMenu &&
