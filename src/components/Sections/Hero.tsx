@@ -13,8 +13,8 @@ export function Hero() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className=" bg-white max-w-[100vw] overflow-hidden">
-      <div className="relative grid lg:grid-cols-2 lg:gap-14 pb-20">
+    <section className=" bg-white max-w-[100vw] overflow-hidden container">
+      <div className="relative grid lg:grid-cols-2 lg:gap-14 pb-20 xl:pt-12">
         {/* content div */}
         <div className="relative mx-auto max-w-2xl pt-32 pb-20 sm:pt-48 sm:pb-32 lg:py-56 ">
           {/* HIDDEN FOR NOW */}
@@ -92,21 +92,38 @@ export function Hero() {
         {/*  */}
         {/* app-screenshot-landing.png */}
 
-        <div className="relative my-auto cursor-pointer p-4 pb-44 lg:p-0 ">
-          <div
-            onClick={() => setShowVideo(true)}
-            className="transform lg:translate-x-[80px] lg:scale-125 xl:scale-1"
-          >
-            <Image
-              className="-mr-20 rounded-md border-[5px] border-gray-200 "
-              src="/app-screenshot-landing.png"
-              alt="app-screenshot-landing"
-              width={1200}
-              height={800}
-            />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20">
-              {/* play button icon */}
-              <CgPlayButton className=" text-white w-10 h-10 transform scale-110 translate-x-[1px]" />
+        <div className="relative my-auto cursor-pointer p-4 pb-44 lg:p-0 pt-28 lg:pt-0">
+          <div className="relative">
+            <div className="absolute xl:hidden z-30 -top-12 md:-top-24 xl:-top-32 lg:-left-8 xl:-left-24">
+              <Image
+                src="/ComicText.png"
+                alt="comic-text"
+                width={200}
+                height={28}
+              />
+              <Image
+                className="mt-2 ml-7"
+                src="/ComicArrow.png"
+                alt="comic-arrow"
+                width={120}
+                height={70}
+              />
+            </div>
+            <div
+              onClick={() => setShowVideo(true)}
+              className="transform lg:translate-x-[80px] lg:scale-125 pt-10 scale-[1.15] sm:scale-100"
+            >
+              <Image
+                className="-mr-20 rounded-md border-[5px] border-gray-200 "
+                src="/app-screenshot-landing.png"
+                alt="app-screenshot-landing"
+                width={1200}
+                height={800}
+              />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20">
+                {/* play button icon */}
+                <CgPlayButton className=" text-white w-10 h-10 transform scale-110 translate-x-[1px]" />
+              </div>
             </div>
           </div>
         </div>
@@ -184,6 +201,6 @@ export function Hero() {
           </svg>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
