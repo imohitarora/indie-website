@@ -69,7 +69,7 @@ const features = [
     // icon: FaRankingStar,
   },
   {
-    title: "Collaborate With Your Approved Supplier",
+    title: "Collaborate With Your Approved Suppliers",
     description:
       "Post new engagements, interact, and transact seamlessly with your approved suppliers, using corporately-approved Statement of Work templates.",
     // icon: FaStamp,
@@ -88,7 +88,7 @@ export default function Home() {
           title={"Effortless Consultant Management Solutions"}
         />
         {/* <CoreAspects /> */}
-        <FeaturedSection />
+        {/* <FeaturedSection /> */}
         <HowItWorks
           title="How Indie Tech Works for Your Enterprise"
           contents={HowItWorksContents}

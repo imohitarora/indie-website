@@ -37,7 +37,7 @@ const ourTeam = {
     },
     {
       name: "Leslie J. Anderson-Rutland, CTP",
-      title: "Risk Data and Technology Advisory",
+      title: "Strategy and GTM Support Advisory",
       description: "Experienced Board Leader; Accomplished Finance, Treasury, Tech and Experience Leader.",
       link: "https://www.linkedin.com/in/lesliejanderson/",
     },
