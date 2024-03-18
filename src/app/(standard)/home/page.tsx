@@ -19,9 +19,9 @@ import { Footer } from "@/components/Sections/Footer";
 
 export const metadata: Metadata = {
   title:
-    "Indie Tech | Financial Services | Fintech | Compliance | Risk | Technology Operations",
+    "Indie Tech | Consulting Made Transparent",
   description:
-    "Indie Tech | Financial Services | Fintech | Compliance | Risk | Technology Operations",
+    "Indie Tech | Consulting Made Transparent",
   icons: {
     icon: "/Logo.png",
   },
