@@ -139,7 +139,7 @@ export default function Page() {
         </div>
       </SectionWrapper>
       {/*  */}
-      <Features contents={featureItems} title={"How It Works"} />
+      <Features contents={featureItems} title={"Key Benefits"} />
       {/*  */}
       <SectionWrapper grey className="pt-20 pb-12">
         <SimpleFeatures
