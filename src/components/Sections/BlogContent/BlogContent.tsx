@@ -19,7 +19,7 @@ async function getPosts() {
     }
   }
 `;
-  const post = await client.fetch(query, {});
+  const post = await client.fetch(query, {}, { cache: "no-store" });
   return ((post || []) as Post[]) ?? [];
 }
 
@@ -31,9 +31,7 @@ export async function BlogContent() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <SmallHeader>From the blog</SmallHeader>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Learn how to grow your business with our expert advice.
-            </p>
+            <p className="mt-2 text-lg leading-8 text-gray-600">Learn how to grow your business with our expert advice.</p>
           </div>
           {posts.length > 0 ? (
             <>
@@ -47,9 +45,7 @@ export async function BlogContent() {
           ) : (
             <div className="flex justify-center">
               <div>
-                <p className="text-center mt-32 md:mt-40 text-xl font-bold opacity-50 px-16">
-                  No blog posts yet, check back soon!
-                </p>
+                <p className="text-center mt-32 md:mt-40 text-xl font-bold opacity-50 px-16">No blog posts yet, check back soon!</p>
                 <hr className="mt-3 border-[2px] border-gray-200" />
               </div>
             </div>

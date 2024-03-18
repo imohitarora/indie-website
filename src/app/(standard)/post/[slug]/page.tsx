@@ -24,7 +24,7 @@ export default async function page(context: any) {
     }
   `;
 
-  const post: Post = await client.fetch(query, { slug });
+  const post: Post = await client.fetch(query, { slug }, { cache: "no-store" });
   return (
     <SectionWrapper>
       {/* backbutton */}

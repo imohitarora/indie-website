@@ -21,7 +21,7 @@ export default async function page(props: any) {
     }
   `;
 
-  const result: Post[] = await client.fetch(query, {});
+  const result: Post[] = await client.fetch(query, {}, { cache: "no-store" });
   return (
     <SectionWrapper>
       <div className=" py-24 sm:py-32">
@@ -39,11 +39,7 @@ export default async function page(props: any) {
             ))}
           </div> */}
           {/* new */}
-          <BlogPageState
-            initialState={result}
-            limit={POST_LIMIT}
-            finalId={result[result.length - 1]?._id}
-          />
+          <BlogPageState initialState={result} limit={POST_LIMIT} finalId={result[result.length - 1]?._id} />
         </div>
       </div>
     </SectionWrapper>

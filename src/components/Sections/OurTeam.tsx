@@ -36,7 +36,7 @@ const ourTeam = {
       link: "https://www.linkedin.com/in/neiledwardbartlett/",
     },
     {
-      name: "Leslie J. Anderson-Rutland, CTP",
+      name: "Leslie J. Anderson-Rutland, CTP, MBA",
       title: "Strategy and GTM Support Advisory",
       description: "Experienced Board Leader; Accomplished Finance, Treasury, Tech and Experience Leader.",
       link: "https://www.linkedin.com/in/lesliejanderson/",
