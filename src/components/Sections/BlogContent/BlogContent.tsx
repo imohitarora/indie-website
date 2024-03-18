@@ -35,12 +35,25 @@ export async function BlogContent() {
               Learn how to grow your business with our expert advice.
             </p>
           </div>
-          <BlogLatest posts={posts} />
-          <div className="pt-20">
-            <Button small href="/blog">
-              View All Blog Posts
-            </Button>
-          </div>
+          {posts.length > 0 ? (
+            <>
+              <BlogLatest posts={posts} />
+              <div className="pt-20">
+                <Button small href="/blog">
+                  View All Blog Posts
+                </Button>
+              </div>
+            </>
+          ) : (
+            <div className="flex justify-center">
+              <div>
+                <p className="text-center mt-32 md:mt-40 text-xl font-bold opacity-50 px-16">
+                  No blog posts yet, check back soon!
+                </p>
+                <hr className="mt-3 border-[2px] border-gray-200" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </SectionWrapper>

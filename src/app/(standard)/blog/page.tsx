@@ -42,7 +42,7 @@ export default async function page(props: any) {
           <BlogPageState
             initialState={result}
             limit={POST_LIMIT}
-            finalId={result[result.length - 1]._id}
+            finalId={result[result.length - 1]?._id}
           />
         </div>
       </div>
