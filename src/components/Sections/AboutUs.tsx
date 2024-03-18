@@ -93,7 +93,15 @@ export function AboutUs() {
       /> */}
       {/*  */}
       <SectionWrapper className=" -translate-y-28">
-        <SmallHeader className="pt-6">
+        <div
+          style={{
+            backgroundImage: "url(/bg-grid.svg)",
+            backgroundSize: "20px",
+            boxShadow: "rgb(255, 255, 255) 0px 30px 20px 60px inset",
+          }}
+          className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
+        />
+        <SmallHeader className="relative z-20 pt-6">
           Our Core Values{" "}
           {/* <span className="text-primary-main">
             <FaLightbulb className="inline" />
@@ -114,14 +122,6 @@ export function AboutUs() {
             </motion.div>
           ))}
         </div>
-        <div
-          style={{
-            backgroundImage: "url(/bg-grid.svg)",
-            backgroundSize: "20px",
-            boxShadow: "rgb(255, 255, 255) 0px 30px 20px 60px inset",
-          }}
-          className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
-        />
       </SectionWrapper>
       {/*  */}
       <CenterBlock

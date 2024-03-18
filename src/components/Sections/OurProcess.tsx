@@ -40,7 +40,15 @@ export function OurProcess({
 }) {
   return (
     <SectionWrapper grey={grey}>
-      <SmallHeader className="pb-6">Our Process</SmallHeader>
+      <div
+        style={{
+          backgroundImage: "url(/bg-grid.svg)",
+          backgroundSize: "20px",
+          boxShadow: "rgb(255, 255, 255) 0px 30px 20px 60px inset",
+        }}
+        className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
+      />
+      <SmallHeader className="pb-6 relative z-20">Our Process</SmallHeader>
       <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
         {(contents || _contents).map(({ title, description }, index) => {
           return (
@@ -62,14 +70,6 @@ export function OurProcess({
           );
         })}
       </div>
-      <div
-        style={{
-          backgroundImage: "url(/bg-grid.svg)",
-          backgroundSize: "20px",
-          boxShadow: "rgb(255, 255, 255) 0px 30px 20px 60px inset",
-        }}
-        className="bg-repeat bg-cover h-full w-full absolute top-0 left-0 z-0"
-      />
     </SectionWrapper>
   );
 }

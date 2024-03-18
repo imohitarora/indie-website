@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { BiDownArrow } from "react-icons/bi";
 import { FaSortDown } from "react-icons/fa";
 
 export type NavLinkProps = {
@@ -13,9 +12,16 @@ export type NavLinkProps = {
     name: string;
     href: string;
   }[];
+  handleClose?: () => void;
 };
 
-export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
+export function NavLink({
+  name,
+  target,
+  href,
+  subMenu,
+  handleClose,
+}: NavLinkProps) {
   const [openSubMenu, setOpenSubMenu] = useState(false);
   const pathname = usePathname();
   const [screenWidth, setScreenWidth] = useState(0);
@@ -61,6 +67,7 @@ export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
             key={subItem.name}
             href={subItem.href}
             className={linkClassName}
+            onClick={handleClose}
           >
             {subItem.name}
           </Link>
@@ -72,7 +79,12 @@ export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
   return (
     <div className="relative mx-auto min-w-[170px] lg:min-w-[55px] text-center">
       {href ? (
-        <Link target={target || "_self"} href={href} className={linkClassName}>
+        <Link
+          target={target || "_self"}
+          href={href}
+          className={linkClassName}
+          onClick={handleClose}
+        >
           {name}
         </Link>
       ) : (
@@ -89,6 +101,7 @@ export function NavLink({ name, target, href, subMenu }: NavLinkProps) {
             openSubMenu &&
             subMenu.map((subItem, index) => (
               <Link
+                onClick={handleClose}
                 key={subItem.name + "-" + index}
                 href={subItem.href}
                 className={linkClassName}

@@ -31,7 +31,13 @@ export function Navigation() {
           }`}
         >
           {navigation_links.map((item, index) => (
-            <NavLink {...item} key={item.name + index} />
+            <NavLink
+              {...item}
+              key={item.name + index}
+              handleClose={() => {
+                setIsMenuOpen(false);
+              }}
+            />
           ))}
         </div>
 
