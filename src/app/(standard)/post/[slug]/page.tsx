@@ -29,7 +29,10 @@ export default async function page(context: any) {
   return (
     <SectionWrapper>
       {/* backbutton */}
-      <Link href="/blog" className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer">
+      <Link
+        href="/blog"
+        className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+      >
         <span aria-hidden="true">←</span>
         {` Go Back`}
       </Link>
@@ -46,7 +49,8 @@ export default async function page(context: any) {
             <div>
               <img className="w-full mb-10 h-full rounded-lg " src={post.mainImage?.asset?.url} alt={post.title + "main image"} />
             </div>
-            <PortableText
+            <div className="blog-container">
+              <PortableText
               value={post.body as any}
               components={{
                 types: {
@@ -54,6 +58,8 @@ export default async function page(context: any) {
                 },
               }}
             />
+            </div>
+            
           </div>
         </div>
       </div>
