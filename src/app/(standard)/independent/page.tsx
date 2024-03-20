@@ -9,12 +9,18 @@ import { Button } from "@/components/Button";
 import Image from "next/image";
 import { Features } from "@/components/Sections/Features";
 import { CenterBlock } from "@/components/Sections/CenterBlock";
-
+//
+import {
+  IoTelescopeOutline,
+  IoOptionsOutline,
+  IoBriefcaseOutline,
+} from "react-icons/io5";
+import { AiOutlineInteraction } from "react-icons/ai";
+import { AiOutlineGlobal } from "react-icons/ai";
+//
 export const metadata: Metadata = {
-  title:
-    "Indie Tech | Consulting Made Transparent",
-  description:
-    "Indie Tech | Consulting Made Transparent",
+  title: "Indie Tech | Consulting Made Transparent",
+  description: "Indie Tech | Consulting Made Transparent",
   icons: {
     icon: "/Logo.png",
   },
@@ -64,27 +70,32 @@ const HowItWorksContents = [
   {
     title: "Join a Global Market",
     description:
-      "Access a vibrant global market where independent consultants connect with leading enterprise professional services buyers",
+      "Access a vibrant global market where independent consultants connect with leading enterprise professional services buyers.",
+    icon: AiOutlineGlobal,
   },
   {
     title: "Automatic Entry under Managed Services Firms",
     description:
       "When the Enterprise deploys their private market, seamlessly enter under their selected managed services firms, unlocking high-profile engagements.",
+    icon: IoBriefcaseOutline,
   },
   {
     title: "Interact and Transact with Clients",
     description:
       "Engage and transact directly with clients, fostering a more personalized and effective collaboration experience.",
+    icon: AiOutlineInteraction,
   },
   {
     title: "Automated Engagement Process",
     description:
       "Streamline your workflow with our automated engagement processes, significantly reducing time to engagement.",
+    icon: IoOptionsOutline,
   },
   {
     title: "Transparently Track Timesheets and Performance",
     description:
       "Utilize our transparent tracking system to monitor timesheets and performance in real-time as you deliver.",
+    icon: IoTelescopeOutline,
   },
 ];
 
@@ -143,7 +154,7 @@ export default function Page() {
       {/*  */}
       <SectionWrapper grey className="pt-20 pb-12">
         <SimpleFeatures
-          featureItems={HowItWorksContents}
+          content={HowItWorksContents}
           title={"How It Works"}
           description={" "}
         />
