@@ -28,6 +28,7 @@ export default async function page(context: any) {
   return (
     <SectionWrapper>
       {/* backbutton */}
+
       <Link
         href="/blog"
         className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
@@ -55,7 +56,9 @@ export default async function page(context: any) {
                 alt={post.title + "main image"}
               />
             </div>
-            <PortableText value={post.body as any} />
+            <div className="blog-container">
+              <PortableText value={post.body as any} />
+            </div>
           </div>
         </div>
       </div>
