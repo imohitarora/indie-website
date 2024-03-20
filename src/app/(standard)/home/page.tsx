@@ -15,13 +15,11 @@ import { ClientContent } from "@/components/Sections/ClientContent";
 import { Features } from "@/components/Sections/Features";
 import { HowItWorks } from "@/components/Sections/HowItWorks";
 import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Sections/Footer";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title:
-    "Indie Tech | Consulting Made Transparent",
-  description:
-    "Indie Tech | Consulting Made Transparent",
+  title: "Indie Tech | Consulting Made Transparent",
+  description: "Indie Tech | Consulting Made Transparent",
   icons: {
     icon: "/Logo.png",
   },

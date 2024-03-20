@@ -1,4 +1,4 @@
-import { Footer } from "@/components/Sections/Footer";
+import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 
 export default function RootLayout({

@@ -1,7 +1,4 @@
-import { Footer } from "@/components/Sections/Footer";
-import type { Metadata } from "next";
 import { Montserrat, Raleway } from "next/font/google";
-import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
