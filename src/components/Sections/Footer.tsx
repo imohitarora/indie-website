@@ -2,15 +2,7 @@
 import Image from "next/image";
 import IndieLogo from "@/../public/Logo.png";
 import { navigation_links } from "@/NavigationLinks";
-import {
-  FaEnvelope,
-  FaInstagram,
-  FaLinkedin,
-  FaMailBulk,
-  FaMailchimp,
-  FaMapMarkerAlt,
-  FaPhone,
-} from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaLinkedin, FaMailBulk, FaMailchimp, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import { ContactUs } from "../ContactUs";
 
@@ -28,59 +20,48 @@ export function Footer() {
           <div className="flex flex-col sm:items-start">
             <a href="/" className="flex gap-4">
               <span className="sr-only">Indie Tech</span>
-              <Image
-                className="h-[40px] w-auto -mt-1"
-                src={IndieLogo}
-                alt="indie tech logo"
-                width="50"
-                height="50"
-              />
-              <span className="font-serif font-bold text-lg capitalize ">
-                Indie Tech
-              </span>
+              <Image className="h-[40px] w-auto -mt-1" src={IndieLogo} alt="indie tech logo" width="50" height="50" />
+              <span className="font-serif font-bold text-lg capitalize ">Indie Tech</span>
             </a>
             <p className="pt-4 max-w-72 font-medium">Follow us on</p>
             <div className="flex gap-5 pt-4">
               {/* linked react-icons */}
-              <a
-                href="https://www.linkedin.com/company/indie-tech/about/"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/company/indie-tech/about/" target="_blank">
                 <FaLinkedin className="h-7 w-7 hover:text-primary-main" />
               </a>
               <a href="https://www.instagram.com/indie.tech.ai/">
-                <FaInstagram
-                  className="h-7 w-7 hover:text-primary-main"
-                  target="_blank"
-                />
+                <FaInstagram className="h-7 w-7 hover:text-primary-main" target="_blank" />
               </a>
             </div>
           </div>
 
           <div className="">
-            <p className=" max-w-72 font-medium">
-              Ready to elevate your consultant management game? Contact us at
-            </p>
+            <p className="max-w-72 font-medium">Ready to elevate your consultant management game? Contact us at</p>
             <div className="flex flex-col gap-1 pt-4 font-medium">
-              <a
-                href="mailto:hello@indietech.ai"
-                className="text-primary-main hover:underline"
-              >
+              <a href="mailto:hello@indietech.ai" className="text-primary-main hover:underline">
                 <FaEnvelope className="h-4 w-4 mr-3 inline-block" />
                 hello@indietech.ai
               </a>
-              <a
-                href="tel:416-912-3664"
-                className="text-primary-main hover:underline"
-              >
+              <a href="tel:416-912-3664" className="text-primary-main hover:underline">
                 <FaPhone className="h-4 w-4 mr-3 inline-block" />
                 416-912-3664
               </a>
-              <div>
-                <FaMapMarkerAlt className="mr-2 mb-7 text-primary-main inline-block" />
-                <p className="text-base text-gray-500 inline-block">
+              <div className="flex items-start">
+                {" "}
+                {/* Ensuring consistent alignment */}
+                <FaMapMarkerAlt className="mr-2 text-primary-main inline-block mt-1" /> {/* Adjusting margin and alignment */}
+                <p className="text-base text-gray-500">
                   140 Yonge Street #200,
                   <br /> Toronto, ON M5C 1X6
+                </p>
+              </div>
+              <div className="flex items-start">
+                {" "}
+                {/* Ensuring consistent alignment */}
+                <FaMapMarkerAlt className="mr-2 text-primary-main inline-block mt-1" /> {/* Adjusting margin and alignment */}
+                <p className="text-base text-gray-500">
+                43 W 23rd St, New York,
+                  <br /> NY 10010, United States
                 </p>
               </div>
             </div>
@@ -91,18 +72,10 @@ export function Footer() {
               Copyright &copy; {year}. All rights reserved.
               <br />
               <div className="flex gap-4 pt-2 font-medium underline">
-                <Link
-                  className="text-gray-700 transition hover:text-primary-main "
-                  target="_blank"
-                  href={"/tos"}
-                >
+                <Link className="text-gray-700 transition hover:text-primary-main " target="_blank" href={"/tos"}>
                   Terms of Service
                 </Link>
-                <Link
-                  className="text-gray-700 transition hover:text-primary-main "
-                  target="_blank"
-                  href={"/privacy"}
-                >
+                <Link className="text-gray-700 transition hover:text-primary-main " target="_blank" href={"/privacy"}>
                   Privacy Policy
                 </Link>
               </div>
@@ -114,20 +87,14 @@ export function Footer() {
                 {navigation_links.map(({ name, href, subMenu }, index) =>
                   !subMenu ? (
                     <li key={"footer-nav-link-" + index}>
-                      <Link
-                        className="text-gray-700 transition hover:text-primary-main"
-                        href={href}
-                      >
+                      <Link className="text-gray-700 transition hover:text-primary-main" href={href}>
                         {name}
                       </Link>
                     </li>
                   ) : (
                     subMenu.map(({ name, href }, subDex) => (
                       <li key={"footer-nav-link-" + subDex}>
-                        <Link
-                          className="text-gray-700 transition hover:text-primary-main"
-                          href={href}
-                        >
+                        <Link className="text-gray-700 transition hover:text-primary-main" href={href}>
                           {name}
                         </Link>
                       </li>
@@ -145,17 +112,8 @@ export function Footer() {
             >
               <span className="sr-only">Back to top</span>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                  clipRule="evenodd"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
               </svg>
             </a>
           </div>

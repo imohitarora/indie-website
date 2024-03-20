@@ -12,9 +12,9 @@ import { CenterBlock } from "@/components/Sections/CenterBlock";
 
 export const metadata: Metadata = {
   title:
-    "Indie Tech | Financial Services | Fintech | Compliance | Risk | Technology Operations",
+    "Indie Tech | Consulting Made Transparent",
   description:
-    "Indie Tech | Financial Services | Fintech | Compliance | Risk | Technology Operations",
+    "Indie Tech | Consulting Made Transparent",
   icons: {
     icon: "/Logo.png",
   },
@@ -139,7 +139,7 @@ export default function Page() {
         </div>
       </SectionWrapper>
       {/*  */}
-      <Features contents={featureItems} title={"How It Works"} />
+      <Features contents={featureItems} title={"Key Benefits"} />
       {/*  */}
       <SectionWrapper grey className="pt-20 pb-12">
         <SimpleFeatures

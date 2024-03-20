@@ -48,7 +48,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 md:text-lg leading-8 text-gray-600">
-              Our consultant platform helps enterprises manage and engage the
+              Our patented consultant platform helps enterprises manage and engage the
               consultants working for them across all divisions, from consulting
               companies to independent contractors. We track and report on the
               performance of consultants in a consistent and actionable manner.
