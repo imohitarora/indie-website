@@ -1,33 +1,42 @@
 import { FeatureItem } from "./FeatureItem";
 import { SectionWrapper } from "../SectionWrapper";
+import { SmallHeader } from "../SmallHeader";
 
 export function SimpleFeatures({
-  featureItems,
+  content,
   title,
   description,
 }: {
-  featureItems: {
+  content: {
     title: string;
     description: string;
+    icon: (props: { className: string }) => JSX.Element | any;
   }[];
   title: string;
   description: string;
 }) {
   return (
-    <SectionWrapper>
-      <div className="flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-          <div className="w-full mx-auto">
-            <h1 className="text-5xl font-bold py-4">{title}</h1>
-            <p className="pb-10">{description}</p>
-          </div>
-        </div>
-        <div>
-          {featureItems.map((item, index) => (
-            <FeatureItem key={index} {...item} />
-          ))}
+    <div className="container mx-auto max-w-[1100px] pb-12">
+      <div className="pb-14 border-t-2 border-gray-200 pt-6 ">
+        <div className="max-w-2xl lg:mx-0 ">
+          <SmallHeader>{title}</SmallHeader>
+          <p className={`text-3xl leading-10 text-gray-600`}>{description}</p>
         </div>
       </div>
-    </SectionWrapper>
+      <div className="grid sm:grid-cols-2 gap-8">
+        {content.map(({ title, description, icon }, index) => (
+          <div
+            key={"featureitem-" + index}
+            className="pt-6 border-t-2 border-gray-200"
+          >
+            <div className="pb-4 flex content-between justify-between">
+              <h4 className="font-bold text-lg">{title}</h4>
+              {icon && icon({ className: "text-3xl text-primary-main" })}
+            </div>
+            <p className="max-w-[500px]">{description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

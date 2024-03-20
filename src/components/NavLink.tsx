@@ -93,8 +93,8 @@ export function NavLink({
             onClick={() => setOpenSubMenu(!openSubMenu)}
             className={"flex " + linkClassName}
           >
-            <FaSortDown className="-mt-1.5 md:mt-0 mr-4 md:mr-1 opacity-50" />
             {name}
+            <FaSortDown className="-mt-1.5 md:mt-0 ml-4 md:ml-1 opacity-50 " />
           </div>
           {subMenu &&
             !largeScreen &&

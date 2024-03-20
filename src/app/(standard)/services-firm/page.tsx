@@ -8,12 +8,17 @@ import { SmallHeader } from "@/components/SmallHeader";
 import { Button } from "@/components/Button";
 import Image from "next/image";
 import { OurProcess } from "@/components/Sections/OurProcess";
+import {
+  IoBriefcaseOutline,
+  IoInfiniteOutline,
+  IoOptionsOutline,
+} from "react-icons/io5";
+import { AiOutlineInteraction } from "react-icons/ai";
+import { Features } from "@/components/Sections/Features";
 
 export const metadata: Metadata = {
-  title:
-    "Indie Tech | Consulting Made Transparent",
-  description:
-    "Indie Tech | Consulting Made Transparent",
+  title: "Indie Tech | Consulting Made Transparent",
+  description: "Indie Tech | Consulting Made Transparent",
   icons: {
     icon: "/Logo.png",
   },
@@ -48,26 +53,30 @@ const featureItems = [
 // 3.	Automate the Engagement Process: Experience the power of automation as [Your Platform Name] handles the entire engagement process, from initiation to completion.
 // 4.	Track Consulting Engagements in Real-Time: Monitor your consulting engagements in near real-time, ensuring you stay informed and responsive throughout the delivery process.
 
-const OurProcessContents = [
+const HowItWorksContents = [
   {
     title: "Join a Marketplace or Create Your Own",
     description:
       "Access markets hosted by your largest clients or take control by creating your private marketplace. Add your bench of consultants for maximum exposure and simply invite your clients.",
+    icon: IoBriefcaseOutline,
   },
   {
     title: "Interact Directly with Clients",
     description:
       "Engage in direct and seamless communication with your clients, building stronger relationships and enhancing collaboration.",
+    icon: AiOutlineInteraction,
   },
   {
     title: "Automate the Engagement Process",
     description:
-      "Experience the power of automation as [Your Platform Name] handles the entire engagement process, from initiation to completion.",
+      "Experience the power of automation as IndieTech handles the entire engagement process, from initiation to completion.",
+    icon: IoInfiniteOutline,
   },
   {
     title: "Track Consulting Engagements in Real-Time",
     description:
       "Monitor your consulting engagements in near real-time, ensuring you stay informed and responsive throughout the delivery process.",
+    icon: IoOptionsOutline,
   },
 ];
 
@@ -121,12 +130,13 @@ export default function Page() {
         </div>
       </SectionWrapper>
       {/*  */}
-      <OurProcess contents={OurProcessContents} />
+      <Features contents={featureItems} title={"Key Benefits"} />
+
       {/*  */}
       <SectionWrapper grey className="pt-20 pb-12">
         <SimpleFeatures
-          featureItems={featureItems}
-          title={"Key Benefits"}
+          content={HowItWorksContents}
+          title={"How It Works"}
           // title={"Elevate Your Consulting Business with Indie Tech "}
           description={
             "Unlock New Avenues for Growth: Join Markets or Host Your Private Marketplace"
