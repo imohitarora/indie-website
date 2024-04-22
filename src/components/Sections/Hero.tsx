@@ -5,11 +5,29 @@ import { HeroPattern } from "../svgs/HeroPattern";
 import { Button } from "../Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { CgPlayButton } from "react-icons/cg";
+import { MdOutlinePlayCircleFilled } from "react-icons/md";
 
 export function Hero() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  function closePopup() {
+    setShowPopup(false);
+  }
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setShowPopup(false);
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   return (
     <section className=" bg-white max-w-[100vw] overflow-hidden container">
       <div className="relative grid lg:grid-cols-2 lg:gap-14 pb-20 xl:pt-12">
@@ -48,12 +66,12 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 md:text-lg leading-8 text-gray-600">
-              Our patented consultant platform helps enterprises manage and engage the
-              consultants working for them across all divisions, from consulting
-              companies to independent contractors. We track and report on the
-              performance of consultants in a consistent and actionable manner.
-              Customers can post new engagements, interact and transact with
-              their approved suppliers, including the use of
+              Our patented consultant platform helps enterprises manage and
+              engage the consultants working for them across all divisions, from
+              consulting companies to independent contractors. We track and
+              report on the performance of consultants in a consistent and
+              actionable manner. Customers can post new engagements, interact
+              and transact with their approved suppliers, including the use of
               corporately-approved Statement of Work templates.
             </p>
             <motion.div
@@ -88,10 +106,27 @@ export function Hero() {
         </div>
 
         {/*  */}
-
+        {showPopup && (
+          <div
+            className="fixed z-[100] pointer inset-0 flex items-center justify-center bg-black bg-opacity-50"
+            onClick={() => setShowPopup(false)}
+          >
+            <div className="relative mx-auto">
+              <iframe
+                className="rounded-md border-[5px] border-gray-200 w-[70vw] h-[43.9vw] "
+                src="https://www.youtube.com/embed/qpf5PGOK6nY?si=wpcX9mJIdL2pRlYC&autoplay=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        )}
+        {/*  */}
         <div className="relative my-auto cursor-pointer p-4 pb-44 lg:p-0 pt-28 lg:pt-0">
-          <div className="relative">
-            <div className="absolute xl:hidden z-30 -top-12 md:-top-24 xl:-top-32 lg:-left-8 xl:-left-24">
+          <div className="relative flex justify-center">
+            <div className="absolute z-30 -top-12 md:-top-24 xl:-top-14 lg:-left-8 xl:-left-0">
               <Image
                 src="/ComicText.png"
                 alt="comic-text"
@@ -106,15 +141,34 @@ export function Hero() {
                 height={70}
               />
             </div>
-            <div className="relative mx-auto">
-              <iframe
+            <div className="relative mx-auto lg:-mr-20 xl:mr-10 2xl:mr-28">
+              <Image
+                className="rounded-md border-[5px] border-gray-200"
+                width={1360}
+                height={818}
+                src="/app-screenshot-landing-resized.png"
+                alt="app screenshot of the search section allowing users to search for constants & engagements"
+                onClick={() => setShowPopup(true)}
+              />
+              <MdOutlinePlayCircleFilled
+                onClick={() => setShowPopup(true)}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  fontSize: "3rem",
+                  color: colors.primary.main,
+                }}
+              />
+              {/* <iframe
                 className="rounded-md border-[5px] border-gray-200 h-[300px] sm:h-[500px] w-full min-w-[340px] lg:w-[780px] xl:w-[880px]"
                 src="https://www.youtube.com/embed/qpf5PGOK6nY?si=wpcX9mJIdL2pRlYC"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 // allowfullscreen
-              ></iframe>
+              ></iframe> */}
             </div>
           </div>
         </div>
