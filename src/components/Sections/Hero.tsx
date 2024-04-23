@@ -115,11 +115,11 @@ export function Hero() {
               <iframe
                 className="rounded-md border-[5px] border-gray-200 w-[70vw] h-[43.9vw] "
                 src="https://www.youtube.com/embed/qpf5PGOK6nY?si=wpcX9mJIdL2pRlYC&autoplay=1"
-                title="YouTube video player"
+                title="Indie Tech Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // allowfullscreen
-              ></iframe>
+                allowFullScreen
+              />
             </div>
           </div>
         )}
