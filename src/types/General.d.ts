@@ -17,3 +17,16 @@ export type Post = {
     };
   };
 };
+
+export type Job = {
+  _id: number;
+  role: string;
+  sub_text: string;
+  location: string;
+  apply_link: string;
+  body: unknown[];
+  slug: {
+    current: string;
+  };
+  _publishedAt: string;
+}
