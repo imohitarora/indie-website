@@ -1,36 +1,55 @@
 import { BlogArticle } from "@/components/BlogArticle";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { client } from "../../../../../sanity/lib/client";
-import { Post } from "@/types/General";
+import { Job } from "@/types/General";
 import { PortableText } from "@portabletext/react";
 import { SmallHeader } from "@/components/SmallHeader";
 import Link from "next/link";
 import { SanityImage } from "../../../../components/SanityImage";
+import { Button } from "@/components/Button";
 
 export default async function page(context: any) {
   const slug = context.params.slug;
 
-  const query = `*[_type == "post" && slug.current == $slug][0] {
+  const query = `*[_type == "job" && slug.current == $slug][0] {
       _id,
-      title,
-      slug,
+      role,
+      sub_text,
+      location,
+      apply_link,
       body,
-      _updatedAt,
-      mainImage{
-        asset->{
-          _id,
-          url
-        }
-      }
+      slug,
+      _publishedAt,
     }
   `;
 
-  const post: Post = await client.fetch(query, { slug }, { cache: "no-store" });
+  const job: Job = await client.fetch(query, { slug }, { cache: "no-store" });
+
+  if (!job) {
+    return (
+      <SectionWrapper>
+        {/* backbutton */}
+        <Link
+          href="/careers"
+          className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+        >
+          <span aria-hidden="true">←</span>
+          {` Go Back`}
+        </Link>
+        {/* // 404 */}
+        <div className="text-center mt-32 mb-32">
+          <h1>404 - Page Not Found</h1>
+          <p>The page you are looking for does not exist.</p>
+        </div>
+      </SectionWrapper>
+    );
+  }
+
   return (
     <SectionWrapper>
       {/* backbutton */}
       <Link
-        href="/blog"
+        href="/careers"
         className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
       >
         <span aria-hidden="true">←</span>
@@ -39,26 +58,17 @@ export default async function page(context: any) {
       <div className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <time
-              dateTime={post._updatedAt}
-              className="text-primary-main font-bold pb-4"
-            >
-              {new Date(post._updatedAt).toLocaleDateString()}
-            </time>
-            <SmallHeader>{post.title}</SmallHeader>
+            <SmallHeader>{job.role}</SmallHeader>
+            <p className="mt-2 text-base text-primary-main font-bold ">
+              {" "}
+              - {job.location}
+            </p>
           </div>
 
           <div className="max-w-5xl mx-auto mt-10">
-            <div>
-              <img
-                className="w-full mb-10 h-full rounded-lg "
-                src={post.mainImage?.asset?.url}
-                alt={post.title + "main image"}
-              />
-            </div>
             <div className="blog-container">
               <PortableText
-                value={post.body as any}
+                value={job.body as any}
                 components={{
                   types: {
                     image: SanityImage,
@@ -66,6 +76,11 @@ export default async function page(context: any) {
                 }}
               />
             </div>
+            {job.apply_link && (
+              <div className="pt-16">
+                <Button href={job.apply_link}>Apply Now</Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
