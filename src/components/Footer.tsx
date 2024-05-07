@@ -60,7 +60,7 @@ export function Footer() {
               </div>
               <Image
                 className="mt-4"
-                src="/SOC2/21972-312_SOC_NonCPA_BLK.png"
+                src="/SOC2/SOCNonCPABlk.png"
                 alt="SOC 2 Certified"
                 width={110}
                 height={110}
