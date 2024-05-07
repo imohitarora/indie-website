@@ -24,6 +24,27 @@ export default async function page(context: any) {
   `;
 
   const job: Job = await client.fetch(query, { slug }, { cache: "no-store" });
+
+  if (!job) {
+    return (
+      <SectionWrapper>
+        {/* backbutton */}
+        <Link
+          href="/careers"
+          className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+        >
+          <span aria-hidden="true">←</span>
+          {` Go Back`}
+        </Link>
+        {/* // 404 */}
+        <div className="text-center mt-32 mb-32">
+          <h1>404 - Page Not Found</h1>
+          <p>The page you are looking for does not exist.</p>
+        </div>
+      </SectionWrapper>
+    );
+  }
+
   return (
     <SectionWrapper>
       {/* backbutton */}
