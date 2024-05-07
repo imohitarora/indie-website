@@ -58,6 +58,13 @@ export function Footer() {
                   Privacy Policy
                 </Link>
               </div>
+              <Image
+                className="mt-4"
+                src="/SOC2/21972-312_SOC_NonCPA_BLK .png"
+                alt="SOC 2 Certified"
+                width={110}
+                height={110}
+              />
             </div>
           </div>
 
@@ -131,6 +138,14 @@ export function Footer() {
                     ))
                   )
                 )}
+                <li key={"footer-nav-link-000"}>
+                  <Link
+                    className="text-gray-700 transition hover:text-primary-main"
+                    href={"/careers"}
+                  >
+                    Careers
+                  </Link>
+                </li>
               </ul>
             </div>
             {/* Socials */}
