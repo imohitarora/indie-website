@@ -125,7 +125,7 @@ export default function Page() {
                   Empower Your Independent Consulting Career with Indie Tech
                 </SmallHeader>
 
-                <p className="mt-4 ">
+                <p className="mt-4 text-black">
                   Welcome to Indie Tech, the ultimate platform for independent
                   consultants seeking unparalleled opportunities. Join a global
                   market of independents and experience a unique setup where

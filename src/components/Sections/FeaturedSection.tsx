@@ -71,7 +71,7 @@ export function FeaturedSection() {
 
                 <a
                   href="#contact-us"
-                  className="mt-8 inline-block rounded border border-primary-main bg-primary-main px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-indigo-500"
+                  className="mt-8 inline-block rounded border border-primary-main bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-primary-main focus:outline-none focus:ring active:text-indigo-500"
                 >
                   Get in Touch
                 </a>

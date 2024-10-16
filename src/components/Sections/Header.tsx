@@ -33,7 +33,7 @@ const OrbitingCircle = () => {
         }}
         transition={{ loop: Infinity, duration: 3, ease: "linear" }}
       >
-        <div className="h-5 w-5 bg-primary-main" />
+        <div className="h-5 w-5 bg-primary" />
       </motion.div>
     </motion.div>
   );

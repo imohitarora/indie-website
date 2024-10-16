@@ -1,21 +1,11 @@
-import { Hero } from "@/components/Sections/Hero";
-import { CoreAspects } from "@/components/Sections/CoreAspects";
-import { OurProcess } from "@/components/Sections/OurProcess";
-import { ContactUs } from "@/components/ContactUs";
-import { AboutUs } from "@/components/Sections/AboutUs";
-import { FinancialServicesSection } from "@/components/Sections/FinancialServices";
-import { OurClients } from "@/components/Sections/OurClients";
-import { Testimonials } from "@/components/Sections/Testimonial";
-import { FeaturedSection } from "@/components/Sections/FeaturedSection";
-import { BlogContent } from "@/components/Sections/BlogContent/BlogContent";
-import { Metadata } from "next";
-import { Enterprise } from "@/components/Sections/Enterprise";
-import { Consultants } from "@/components/Sections/Consultants";
-import { ClientContent } from "@/components/Sections/ClientContent";
-import { Features } from "@/components/Sections/Features";
-import { HowItWorks } from "@/components/Sections/HowItWorks";
-import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
+import { BlogContent } from "@/components/Sections/BlogContent/BlogContent";
+import { Features } from "@/components/Sections/Features";
+import { Hero } from "@/components/Sections/Hero";
+import { HowItWorks } from "@/components/Sections/HowItWorks";
+import PricingCards from "@/components/Sections/Pricing";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Indie Tech | Consulting Made Transparent",
@@ -53,6 +43,40 @@ const HowItWorksContents = [
   },
 ];
 
+const pricingTiers = [
+  {
+    title: "Basic",
+    price: "$29/month",
+    features: [
+      "Access to basic features",
+      "Email support",
+      "10 projects",
+    ],
+  },
+  {
+    title: "Pro",
+    price: "$59/month",
+    features: [
+      "Access to all features",
+      "Priority email support",
+      "Unlimited projects",
+      "Advanced analytics",
+    ],
+  },
+  {
+    title: "Enterprise",
+    price: "Contact us",
+    features: [
+      "Custom solutions",
+      "Dedicated support",
+      "Unlimited projects",
+      "Advanced analytics",
+      "Custom integrations",
+    ],
+  },
+];
+
+
 const features = [
   {
     title: "Comprehensive Consultant Management",
@@ -83,7 +107,7 @@ export default function Home() {
         {/* <ClientContent /> */}
         <Features
           contents={features}
-          title={"Effortless Consultant Management Solutions"}
+          title={"Effortless Consultant Lifecycle Management"}
         />
         {/* <CoreAspects /> */}
         {/* <FeaturedSection /> */}
@@ -91,6 +115,7 @@ export default function Home() {
           title="How Indie Tech Works for Your Enterprise"
           contents={HowItWorksContents}
         />
+        <PricingCards />
         <BlogContent />
         {/* <ContactUs /> */}
       </main>

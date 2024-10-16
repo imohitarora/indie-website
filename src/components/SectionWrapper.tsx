@@ -20,7 +20,7 @@ export function SectionWrapper({
         grey
           ? "bg-gray-100"
           : primary
-          ? "bg-primary-main text-white"
+          ? "bg-primary text-white"
           : "bg-white"
       } 
       relative ${className}

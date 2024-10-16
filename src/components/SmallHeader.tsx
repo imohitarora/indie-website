@@ -19,7 +19,7 @@ export function SmallHeader({
         {children}
       </h2>
       {!noUnderline && (
-        <div className="h-1 max-w-[30%] w-full mt-5 bg-primary-main mb-6"></div>
+        <div className="h-1 max-w-[30%] w-full mt-5 bg-primary mb-6"></div>
       )}
     </div>
   );

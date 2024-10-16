@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { BlogArticle } from "./BlogArticle";
 import { Post } from "@/types/General";
-import { client } from "../../sanity/lib/client";
-import { Button } from "./Button";
+import { useState } from "react";
+import { BlogArticle } from "./BlogArticle";
 
 export function BlogPageState({
   initialState,

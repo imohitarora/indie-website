@@ -5,7 +5,7 @@ import { Enterprise } from "@/components/Sections/Enterprise";
 import { SimpleFeatures } from "@/components/FeaturesSection/SimpleFeatures";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { SmallHeader } from "@/components/SmallHeader";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { OurProcess } from "@/components/Sections/OurProcess";
 import {
@@ -15,6 +15,7 @@ import {
 } from "react-icons/io5";
 import { AiOutlineInteraction } from "react-icons/ai";
 import { Features } from "@/components/Sections/Features";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Indie Tech | Consulting Made Transparent",
@@ -107,7 +108,7 @@ export default function Page() {
                   Elevate Your Consulting Business with Indie Tech
                 </SmallHeader>
 
-                <p className="mt-4 ">
+                <p className="mt-4 text-black">
                   Welcome to Indie Tech where consulting firms like yours can
                   revolutionize the way you collaborate with clients. Join
                   markets hosted by your largest clients or take the lead by
@@ -115,15 +116,11 @@ export default function Page() {
                   streamline engagements, interact directly with clients, and
                   automate the entire process.
                 </p>
-                <Button
-                  className="mt-12"
-                  target="_blank"
-                  href={
-                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
-                  }
-                >
-                  Book a call
-                </Button>
+                <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
+                  <Button className="mt-12" >
+                    Book a call
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

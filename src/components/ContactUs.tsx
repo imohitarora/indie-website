@@ -23,7 +23,7 @@ export function ContactUs() {
           </div>
           {/*  */}
           <div className="max-w-md mx-auto lg:mx-7 py-3 lg:w-fit w-full px-1 sm:px-2 lg:px-3">
-            <div className="inline-block h-0.5 w-full lg:h-[250px] lg:min-h-[1em] lg:w-0.5 self-stretch bg-primary-main opacity-100 " />
+            <div className="inline-block h-0.5 w-full lg:h-[250px] lg:min-h-[1em] lg:w-0.5 self-stretch bg-primary opacity-100 " />
           </div>
           {/*  */}
           <div className=" mx-auto lg:mx-7 lg:pl-6 pr-4 sm:pr-6 lg:pr-8">

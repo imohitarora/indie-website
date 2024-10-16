@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animation";
 import { TypeWriter } from "../TypeWriter";
 import { CenterBlock } from "./CenterBlock";
-import { Button } from "../Button";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 /*
 Core Values:
@@ -130,14 +131,11 @@ export function AboutUs() {
         At Indie Tech, we invite enterprises, consulting firms, and independent consultants to join us in shaping the future of consulting. Whether you're seeking efficient consultant management, growth opportunities, or unparalleled career advancement, we're here to redefine collaboration, elevate careers, and unlock new possibilities.
         `}
       >
-        <Button
-          target="_blank"
-          href={
-            "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
-          }
-        >
-          Book a call
-        </Button>
+        <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
+          <Button className="mt-12" >
+            Book a call
+          </Button>
+        </Link>
       </CenterBlock>
       {/*  */}
     </>

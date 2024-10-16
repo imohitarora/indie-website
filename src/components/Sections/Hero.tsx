@@ -2,14 +2,17 @@
 
 import { colors, theme } from "@/theme";
 import { HeroPattern } from "../svgs/HeroPattern";
-import { Button } from "../Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MdOutlinePlayCircleFilled } from "react-icons/md";
+import { Button } from "../ui/button";
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export function Hero() {
+  const router = useRouter()
   const [showPopup, setShowPopup] = useState(false);
 
   function closePopup() {
@@ -58,21 +61,19 @@ export function Hero() {
                     width: "100%",
                   },
                 }}
-                className={`bg-primary-main h-1`}
+                className={`bg-primary h-1`}
               />
             </div>
             <h1 className=" text-3xl md:text-4xl font-bold tracking-tight sm:text-6xl">
-              Enterprise Consultant Management
+              Collaborate Smart. Procure Seamlessly. <span style={{ background: "linear-gradient(to right, #1A8A98, #47A1AC)", WebkitBackgroundClip: "text", color: "transparent" }}>
+                Deliver Results.
+              </span>
             </h1>
 
             <p className="mt-6 md:text-lg leading-8 text-gray-600">
-              Our patented consultant platform helps enterprises manage and
-              engage the consultants working for them across all divisions, from
-              consulting companies to independent contractors. We track and
-              report on the performance of consultants in a consistent and
-              actionable manner. Customers can post new engagements, interact
-              and transact with their approved suppliers, including the use of
-              corporately-approved Statement of Work templates.
+              Indie Tech&apos;s AI-powered
+              Enterprise Collaboration Hubs
+              streamline consulting lifecycle management, optimize performance, and drive growth. Unlock the potential of smarter, data-driven decisions.
             </p>
             <motion.div
               initial="offscreen"
@@ -85,18 +86,12 @@ export function Hero() {
               })}
             >
               {/* md:items-center md:justify-center */}
-              <div
-                className="mt-10 flex 
-             gap-x-2 md:gap-x-6"
-              >
-                <Button
-                  target="_blank"
-                  href={
-                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
-                  }
-                >
-                  Book a call
-                </Button>
+              <div className="mt-10 flex gap-x-2 md:gap-x-6">
+                <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
+                  <Button  >
+                    Book a call
+                  </Button>
+                </Link>
                 {/* <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
             </Button> */}
