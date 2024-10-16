@@ -1,8 +1,12 @@
-import { Button } from "@/components/ui/button"
+'use client'
+
+import { Button } from "@/components/Button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Check } from "lucide-react"
+import { Check, Link } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function PricingCards() {
+  const router = useRouter()
   const tiers = [
     {
       name: "Freemium",
@@ -85,7 +89,17 @@ export default function PricingCards() {
             <CardFooter className="flex-col items-start">
               <p className="font-semibold mb-2">Best for:</p>
               <p className="text-sm text-muted-foreground mb-4">{tier.bestFor}</p>
-              <Button className="w-full">{tier.name === "Enterprise" ? "Contact Sales" : "Get Started"}</Button>
+              <Button
+                small
+                className="w-full"
+                onClick={() => {
+                  const url = 'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/';
+                  window.open(url, '_blank');
+                }}
+              >
+                {tier.name === "Enterprise" ? "Contact Us" : "Get Started"}
+              </Button>
+
             </CardFooter>
           </Card>
         ))}
