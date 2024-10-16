@@ -28,13 +28,13 @@ function JobListing({ job }: { job: Job }) {
     >
       <div>
         <h3 className="text-lg font-semibold text-gray-900">{job.role}</h3>
-        <p className="mt-2 text-base text-primary-main font-bold">
+        <p className="mt-2 text-base text-primary font-bold">
           {" "}
           - {job.location}
         </p>
         <p className="mt-2 text-base text-gray-500">{job.sub_text}</p>
       </div>
-      <div className="text-4xl mt-6 ml-auto text-gray-500 group-hover:text-primary-main">
+      <div className="text-4xl mt-6 ml-auto text-gray-500 group-hover:text-primary">
         →
       </div>
     </a>

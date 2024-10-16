@@ -44,11 +44,11 @@ export function Features({
                 viewport={{ once: true, amount: 0.8 }}
                 variants={fadeIn({ delay: index * 0.3, direction: "down" })}
               >
-                <div className="block rounded-lg min-h-full border bg-white border-primary-main p-8 shadow-effect shadow-primary-main/20  ">
-                  {/* <item.icon className="h-9 w-9 text-primary-main" /> */}
+                <div className="block rounded-lg min-h-full border bg-white border-primary p-8 shadow-effect shadow-primary/20  ">
+                  {/* <item.icon className="h-9 w-9 text-primary" /> */}
 
                   <h2 className="mt-4 pb-4 text-xl font-bold ">
-                    <span className="text-primary-main text-2xl inline-block font-bold">
+                    <span className="text-primary text-2xl inline-block font-bold">
                       {/* arrow */}
                       {">"}
                     </span>{" "}

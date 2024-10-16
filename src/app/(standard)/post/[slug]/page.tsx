@@ -31,7 +31,7 @@ export default async function page(context: any) {
       {/* backbutton */}
       <Link
         href="/blog"
-        className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+        className="hover:text-primary underline font-medium hover:no-underline cursor-pointer"
       >
         <span aria-hidden="true">←</span>
         {` Go Back`}
@@ -41,7 +41,7 @@ export default async function page(context: any) {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <time
               dateTime={post._updatedAt}
-              className="text-primary-main font-bold pb-4"
+              className="text-primary font-bold pb-4"
             >
               {new Date(post._updatedAt).toLocaleDateString()}
             </time>

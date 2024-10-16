@@ -32,7 +32,7 @@ export function ContactUs() {
                 <div className="pt-6">
                   <h3 className="text-lg font-medium ">Address</h3>
                   <div className="flex items-center mt-2">
-                    <FaMapMarkerAlt className="mr-2 text-primary-main" />
+                    <FaMapMarkerAlt className="mr-2 text-primary" />
                     <p className="text-base text-gray-500">
                       140 Yonge Street #200, Toronto, ON M5C 1X6
                     </p>
@@ -41,7 +41,7 @@ export function ContactUs() {
                 <div className="pt-6">
                   <h3 className="text-lg font-medium ">Phone</h3>
                   <div className="flex items-center mt-2">
-                    <FaPhone className="mr-2 text-primary-main" />
+                    <FaPhone className="mr-2 text-primary" />
                     <a
                       target="_blank"
                       href="tel:416-912-3664"
@@ -54,7 +54,7 @@ export function ContactUs() {
                 <div className="pt-6">
                   <h3 className="text-lg font-medium ">Email</h3>
                   <div className="flex items-center mt-2">
-                    <FaEnvelope className="mr-2 text-primary-main" />
+                    <FaEnvelope className="mr-2 text-primary" />
                     <a
                       target="_blank"
                       href="mailto:hello@indietech.ai"

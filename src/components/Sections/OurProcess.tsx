@@ -59,9 +59,9 @@ export function OurProcess({
               viewport={{ once: true, amount: 0.8 }}
               variants={fadeIn({ delay: index * 0.3, direction: "left" })}
             >
-              <div className="block rounded-lg min-h-full border bg-white border-primary-main p-8 shadow-effect shadow-primary-main/20  ">
+              <div className="block rounded-lg min-h-full border bg-white border-primary p-8 shadow-effect shadow-primary/20  ">
                 {/* <div className="p-8 bg-white text-left border-[1px] border-gray-300 rounded"> */}
-                <h3 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-primary-main min-h-16">
+                <h3 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-primary min-h-16">
                   {title}
                 </h3>
                 <p className="text-gray-700">{description}</p>

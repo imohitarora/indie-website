@@ -7,7 +7,7 @@ import { colors } from "@/theme";
 
 export function ClientContent() {
   const boxClass =
-    "flex flex-col z-20 justify-between bg-white min-h-[400px] border-[2px] border-primary-main p-8 rounded-lg hover:shadow-lg transform hover:-translate-y-[8px] transition-all duration-300 ease-in-out";
+    "flex flex-col z-20 justify-between bg-white min-h-[400px] border-[2px] border-primary p-8 rounded-lg hover:shadow-lg transform hover:-translate-y-[8px] transition-all duration-300 ease-in-out";
 
   return (
     // <SectionWrapper primary>
@@ -49,7 +49,7 @@ export function ClientContent() {
       <div className="relative grid grid-cols-1 z-30 lg:grid-cols-2 gap-10">
         <Link href="/consultant">
           <div className={boxClass}>
-            <small className="font-bold text-primary-main ">Consultants</small>
+            <small className="font-bold text-primary ">Consultants</small>
             <SmallHeader>Win better contracts</SmallHeader>
             <Paragraph>
               Explore cutting-edge consulting technology that effortlessly links
@@ -61,7 +61,7 @@ export function ClientContent() {
             {/* <Button href="/consultant">Learn more</Button> */}
             <p className="pt-5 font-bold hover:text-common-black">
               Learn more
-              <span className="text-primary-main pl-4" aria-hidden="true">
+              <span className="text-primary pl-4" aria-hidden="true">
                 &rarr;
               </span>
             </p>
@@ -69,7 +69,7 @@ export function ClientContent() {
         </Link>
         <Link href="/enterprise">
           <div className={boxClass}>
-            <small className="font-bold text-primary-main ">Enterprise</small>
+            <small className="font-bold text-primary ">Enterprise</small>
             <SmallHeader>Built for Enterprise. Loved by suppliers</SmallHeader>
             <Paragraph>
               For years, vendor management systems and procurement suites have
@@ -80,7 +80,7 @@ export function ClientContent() {
             {/* <Button href="/enterprise">Learn more</Button> */}
             <p className="pt-5 font-bold hover:text-common-black">
               Learn more
-              <span className="text-primary-main pl-4" aria-hidden="true">
+              <span className="text-primary pl-4" aria-hidden="true">
                 &rarr;
               </span>
             </p>

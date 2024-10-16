@@ -31,7 +31,7 @@ export default async function page(context: any) {
         {/* backbutton */}
         <Link
           href="/careers"
-          className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+          className="hover:text-primary underline font-medium hover:no-underline cursor-pointer"
         >
           <span aria-hidden="true">←</span>
           {` Go Back`}
@@ -50,7 +50,7 @@ export default async function page(context: any) {
       {/* backbutton */}
       <Link
         href="/careers"
-        className="hover:text-primary-main underline font-medium hover:no-underline cursor-pointer"
+        className="hover:text-primary underline font-medium hover:no-underline cursor-pointer"
       >
         <span aria-hidden="true">←</span>
         {` Go Back`}
@@ -59,7 +59,7 @@ export default async function page(context: any) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <SmallHeader>{job.role}</SmallHeader>
-            <p className="mt-2 text-base text-primary-main font-bold ">
+            <p className="mt-2 text-base text-primary font-bold ">
               {" "}
               - {job.location}
             </p>

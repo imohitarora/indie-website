@@ -55,7 +55,7 @@ export function HowItWorks({
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.8 }}
                   variants={fadeIn({ delay: index * 0.3 })}
-                  className="block border-l-2 border-primary-main pl-4 "
+                  className="block border-l-2 border-primary pl-4 "
                 >
                   <p className="pb-1 font-bold ">
                     {feature.title}. &nbsp;

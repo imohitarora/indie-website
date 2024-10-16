@@ -29,7 +29,7 @@ export default function NotFound({
           <p className="text-lg text-gray-600">Page not found</p>
         </div>
         <div>
-          <Link href="/" className="text-primary-main">
+          <Link href="/" className="text-primary">
             Go back to Home
           </Link>
         </div>

@@ -7,7 +7,7 @@ import { fadeIn } from "@/lib/animation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MdOutlinePlayCircleFilled } from "react-icons/md";
-import { Button } from "../ui/button";
+import { Button } from "@/components/Button";
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
@@ -40,7 +40,7 @@ export function Hero() {
           {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Announcing our next round of funding.{" "}
-            <a href="#" className="font-semibold text-primary-main">
+            <a href="#" className="font-semibold text-primary">
               <span className="absolute inset-0" aria-hidden="true" />
               Read more <span aria-hidden="true">&rarr;</span>
             </a>
@@ -87,11 +87,15 @@ export function Hero() {
             >
               {/* md:items-center md:justify-center */}
               <div className="mt-10 flex gap-x-2 md:gap-x-6">
-                <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
-                  <Button  >
-                    Book a call
-                  </Button>
-                </Link>
+                <Button
+                  target="_blank"
+                  className="mt-12"
+                  href={
+                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+                  }
+                >
+                  Book a call
+                </Button>
                 {/* <Button href={"#features"} accent>
               Learn more <span aria-hidden="true">→</span>
             </Button> */}
@@ -173,7 +177,7 @@ export function Hero() {
         <div className="animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-primary-main"
+            className="h-6 w-6 text-primary"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

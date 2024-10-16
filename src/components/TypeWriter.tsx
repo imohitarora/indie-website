@@ -35,7 +35,7 @@ export function TypeWriter({ text, speed = 20 }: TypeWriterProps) {
       <span className="absolute top-0 left-0 h-full">
         {displayText}
         {showCursor && (
-          <motion.span className="animate-blink scale-110 text-primary-main">
+          <motion.span className="animate-blink scale-110 text-primary">
             |
           </motion.span>
         )}

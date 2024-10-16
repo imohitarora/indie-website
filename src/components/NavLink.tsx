@@ -42,7 +42,7 @@ export function NavLink({
   const linkClassName = `whitespace-nowrap cursor-pointer pt-8 pb-[1px] lg:pt-0 lg:text-base lg:mx-0 font-semibold leading-6 text-gray-900 border-b-[3px] ${
     href === "" || href !== pathname
       ? "border-transparent hover:border-gray-200 "
-      : "border-primary-main "
+      : "border-primary "
   }`;
 
   const renderSubMenu = () => {

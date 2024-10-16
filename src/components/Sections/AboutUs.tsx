@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animation";
 import { TypeWriter } from "../TypeWriter";
 import { CenterBlock } from "./CenterBlock";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/Button";
 import Link from "next/link";
 
 /*
@@ -104,7 +104,7 @@ export function AboutUs() {
         />
         <SmallHeader className="relative z-20 pt-6">
           Our Core Values{" "}
-          {/* <span className="text-primary-main">
+          {/* <span className="text-primary">
             <FaLightbulb className="inline" />
           </span> */}
         </SmallHeader>
@@ -116,7 +116,7 @@ export function AboutUs() {
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.8 }}
               variants={fadeIn({ delay: index * 0.2, direction: "left" })}
-              className="bg-white p-4 rounded-md border-[1px] border-primary-main shadow-effect shadow-primary-main/20"
+              className="bg-white p-4 rounded-md border-[1px] border-primary shadow-effect shadow-primary/20"
             >
               <h3 className="text-xl font-bold mb-2">{value.title}</h3>
               <p className="text-gray-700">{value.description}</p>
@@ -131,11 +131,15 @@ export function AboutUs() {
         At Indie Tech, we invite enterprises, consulting firms, and independent consultants to join us in shaping the future of consulting. Whether you're seeking efficient consultant management, growth opportunities, or unparalleled career advancement, we're here to redefine collaboration, elevate careers, and unlock new possibilities.
         `}
       >
-        <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
-          <Button className="mt-12" >
-            Book a call
-          </Button>
-        </Link>
+        <Button
+          target="_blank"
+          className="mt-12"
+          href={
+            "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+          }
+        >
+          Book a call
+        </Button>
       </CenterBlock>
       {/*  */}
     </>

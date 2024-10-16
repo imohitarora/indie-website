@@ -52,7 +52,7 @@ const ourTeam = {
 
 function TeamMember({ name, title, description, link }: { name: string; title: string; description: string; link: string }) {
   return (
-    <a className="flex flex-col border-l-2 pl-4 border-gray-200 hover:border-primary-main md:flex-row items-center justify-center md:justify-between mb-8" target="_blank" rel="noreferrer" href={link}>
+    <a className="flex flex-col border-l-2 pl-4 border-gray-200 hover:border-primary md:flex-row items-center justify-center md:justify-between mb-8" target="_blank" rel="noreferrer" href={link}>
       {/* <div className="md:w-1/3">
          <img
            src="sophia.jpg"
@@ -62,7 +62,7 @@ function TeamMember({ name, title, description, link }: { name: string; title: s
        </div> */}
       <div className="">
         <h3 className="text-xl font-bold mb-2">{name}</h3>
-        <p className="text-primary-main font-bold">{title}</p>
+        <p className="text-primary font-bold">{title}</p>
         <p className="text-gray-700">{description}</p>
       </div>
     </a>

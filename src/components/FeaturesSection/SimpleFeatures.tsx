@@ -31,7 +31,7 @@ export function SimpleFeatures({
           >
             <div className="pb-4 flex content-between justify-between">
               <h4 className="font-bold text-lg">{title}</h4>
-              {icon && icon({ className: "text-3xl text-primary-main" })}
+              {icon && icon({ className: "text-3xl text-primary" })}
             </div>
             <p className="max-w-[500px]">{description}</p>
           </div>

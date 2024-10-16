@@ -5,7 +5,7 @@ import { Enterprise } from "@/components/Sections/Enterprise";
 import { SimpleFeatures } from "@/components/FeaturesSection/SimpleFeatures";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { SmallHeader } from "@/components/SmallHeader";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/Button";
 import Image from "next/image";
 import { OurProcess } from "@/components/Sections/OurProcess";
 import {
@@ -116,11 +116,15 @@ export default function Page() {
                   streamline engagements, interact directly with clients, and
                   automate the entire process.
                 </p>
-                <Link href={'https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/'} target="_blank">
-                  <Button className="mt-12" >
-                    Book a call
-                  </Button>
-                </Link>
+                <Button
+                  target="_blank"
+                  className="mt-12"
+                  href={
+                    "https://outlook.office365.com/owa/calendar/IndieTechWebsiteLink@indietech.ai/bookings/"
+                  }
+                >
+                  Book a call
+                </Button>
               </div>
             </div>
           </div>

@@ -1,12 +1,9 @@
-'use client';
-
 import { Post } from "@/types/General";
 import { client } from "../../../../sanity/lib/client";
+import { Button } from "../../Button";
 import { SectionWrapper } from "../../SectionWrapper";
 import { SmallHeader } from "../../SmallHeader";
 import { BlogLatest } from "./BlogLatest";
-import { Button } from "../../ui/button";
-import { useRouter } from 'next/navigation'
 
 async function getPosts() {
   const query = `*[_type == "post"] | order(_createdAt desc) [${0}..${2}] {
@@ -27,7 +24,6 @@ async function getPosts() {
 }
 
 export async function BlogContent() {
-  const router = useRouter()
   const posts = await getPosts();
   return (
     <SectionWrapper grey>
@@ -41,7 +37,7 @@ export async function BlogContent() {
             <>
               <BlogLatest posts={posts} />
               <div className="pt-20">
-                <Button onClick={() => router.push('/blog')}>
+                <Button small href="/blog">
                   View All Blog Posts
                 </Button>
               </div>

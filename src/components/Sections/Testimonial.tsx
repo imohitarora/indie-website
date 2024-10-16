@@ -13,7 +13,7 @@ export function Testimonials() {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
               consequuntur amet culpa cum itaque neque.
             </p>
-            <h2 className="mt-4 text-sm font-semibold tracking-widest text-primary-main">
+            <h2 className="mt-4 text-sm font-semibold tracking-widest text-primary">
               John Doe
             </h2>
           </div>
@@ -22,7 +22,7 @@ export function Testimonials() {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
               consequuntur amet culpa cum itaque neque.
             </p>
-            <h2 className="mt-4 text-sm font-semibold tracking-widest text-primary-main">
+            <h2 className="mt-4 text-sm font-semibold tracking-widest text-primary">
               John Doe
             </h2>
           </div>

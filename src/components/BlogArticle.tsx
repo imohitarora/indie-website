@@ -4,7 +4,7 @@ import Link from "next/link";
 export function BlogArticle({ post }: { post: Post }) {
   return (
     <Link href={`/post/${post.slug.current}`}>
-      <article className="group h-full bg-white hover:border-primary border-2 border-gray-200 hover:border-primary-main rounded-lg">
+      <article className="group h-full bg-white hover:border-primary border-2 border-gray-200 hover:border-primary rounded-lg">
         <div>
           <img
             className="w-full h-48 object-cover rounded-lg bg-gray-100 group-hover:opacity-75 transition duration-150 ease-in-out sm:h-64 lg:w-full"
@@ -29,7 +29,7 @@ export function BlogArticle({ post }: { post: Post }) {
                 </a> */}
           </div>
           <div className="relative">
-            <h3 className="mt-3 h-[84px] text-lg font-semibold leading-6 text-gray-900 group-hover:text-primary-main">
+            <h3 className="mt-3 h-[84px] text-lg font-semibold leading-6 text-gray-900 group-hover:text-primary">
               <span className="absolute inset-0" />
               {post.title}
             </h3>
@@ -54,7 +54,7 @@ export function BlogArticle({ post }: { post: Post }) {
         </div> */}
           </div>
 
-          <p className="text-sm mt-auto pt-6 font-semibold leading-6 text-primary-main cursor-pointer">
+          <p className="text-sm mt-auto pt-6 font-semibold leading-6 text-primary cursor-pointer">
             Read Article <span aria-hidden="true">&rarr;</span>
           </p>
         </div>
