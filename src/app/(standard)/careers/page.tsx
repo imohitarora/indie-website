@@ -6,6 +6,8 @@ import { SmallHeader } from "@/components/SmallHeader";
 import { Button } from "@/components/Button";
 // import { CareersPageState } from "@/components/CareersPageState";
 
+export const dynamic = 'force-static'
+
 export type Job = {
   _id: number;
   title: string;

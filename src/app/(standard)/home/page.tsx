@@ -7,6 +7,8 @@ import { HowItWorks } from "@/components/Sections/HowItWorks";
 import PricingCards from "@/components/Sections/Pricing";
 import { Metadata } from "next";
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "Indie Tech | Consulting Made Transparent",
   description: "Indie Tech | Consulting Made Transparent",

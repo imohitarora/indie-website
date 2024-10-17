@@ -5,6 +5,8 @@ import { client } from "../../../../sanity/lib/client";
 import { SmallHeader } from "@/components/SmallHeader";
 import { BlogPageState } from "@/components/BlogPageState";
 
+export const dynamic = 'force-static'
+
 export default async function page(props: any) {
   const POST_LIMIT = 40;
   const query = `*[_type == "post"] | order(_createdAt desc) [${0}..${POST_LIMIT}] {
