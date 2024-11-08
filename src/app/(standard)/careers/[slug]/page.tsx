@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { BlogArticle } from "@/components/BlogArticle";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { client } from "../../../../../sanity/lib/client";
@@ -9,6 +7,8 @@ import { SmallHeader } from "@/components/SmallHeader";
 import Link from "next/link";
 import { SanityImage } from "../../../../components/SanityImage";
 import { Button } from "@/components/Button";
+
+export const dynamic = 'force-static'
 
 export default async function page(context: any) {
   const slug = context.params.slug;
