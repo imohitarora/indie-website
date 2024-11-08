@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { BlogArticle } from "@/components/BlogArticle";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { client } from "../../../../../sanity/lib/client";
