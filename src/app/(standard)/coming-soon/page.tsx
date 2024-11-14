@@ -113,7 +113,7 @@ export default function Home() {
 
                 {submitStatus === 'success' && (
                   <p className="text-sm text-center text-green-600">
-                    Thanks for joining! We'll notify you when we launch.
+                    Thanks for joining! We&apos;ll notify you when we launch.
                   </p>
                 )}
                 {submitStatus === 'error' && (
