@@ -14,16 +14,13 @@ export default function Home() {
     setIsSubmitting(true);
 
     try {
-      const formData = new URLSearchParams();
-      formData.append('form-name', 'waitlist');
-      formData.append('email', email);
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: formData.toString(),
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "waitlist",
+          email,
+        }).toString(),
       });
 
       if (response.ok) {
@@ -79,11 +76,6 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full max-w-md mx-auto space-y-4">
-                {/* Hidden form for Netlify */}
-                <form name="waitlist" data-netlify="true" hidden>
-                  <input type="email" name="email" />
-                </form>
-
                 {/* Actual form */}
                 <form
                   onSubmit={handleSubmit}
