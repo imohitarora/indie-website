@@ -11,7 +11,6 @@ export const navigation_links = [
   },
   {
     name: "Login",
-    target: "_blank",
-    href: "https://portal.indietech.ai/login",
+    href: "/coming-soon",
   },
 ];
